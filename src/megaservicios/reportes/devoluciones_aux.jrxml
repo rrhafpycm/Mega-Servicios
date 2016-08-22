@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="devoluciones_aux" language="groovy" pageWidth="555" pageHeight="802" columnWidth="535" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6f0acb1a-35f7-415a-8bcd-b4a9572b6921">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     devoluciones_aux.`Id_aux` AS devoluciones_aux_Id_aux,
+     devoluciones_aux.`Fecha` AS devoluciones_aux_Fecha,
+     devoluciones_aux.`Amecop` AS devoluciones_aux_Amecop,
+     devoluciones_aux.`Nombre` AS devoluciones_aux_Nombre,
+     devoluciones_aux.`Piezas` AS devoluciones_aux_Piezas,
+     devoluciones_aux.`Costo` AS devoluciones_aux_Costo,
+     devoluciones_aux.`Importe` AS devoluciones_aux_Importe,
+     devoluciones_aux.`Iva` AS devoluciones_aux_Iva,
+     devoluciones_aux.`Descuentos` AS devoluciones_aux_Descuentos,
+     devoluciones_aux.`Total` AS devoluciones_aux_Total
+FROM
+     `devoluciones_aux` devoluciones_aux]]>
+	</queryString>
+	<field name="devoluciones_aux_Id_aux" class="java.lang.Integer"/>
+	<field name="devoluciones_aux_Fecha" class="java.sql.Date"/>
+	<field name="devoluciones_aux_Amecop" class="java.lang.String"/>
+	<field name="devoluciones_aux_Nombre" class="java.lang.String"/>
+	<field name="devoluciones_aux_Piezas" class="java.lang.Integer"/>
+	<field name="devoluciones_aux_Costo" class="java.lang.Double"/>
+	<field name="devoluciones_aux_Importe" class="java.lang.Double"/>
+	<field name="devoluciones_aux_Iva" class="java.lang.Double"/>
+	<field name="devoluciones_aux_Descuentos" class="java.lang.Double"/>
+	<field name="devoluciones_aux_Total" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="fcec0f5b-c0cf-4c95-aa14-05ecf23e17cc"/>
+				<imageExpression><![CDATA["leaf_banner_gray.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="0599bf1b-a9de-4fe4-bd5d-aa93531f205d"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Leaf Gray Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="117" y="46" width="157" height="22" uuid="ccc93dce-2220-4068-a1f8-92853134776c"/>
+				<text><![CDATA[Leaf Gray SubTitle]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="9e295b1a-1d32-482c-b3e9-e6a5a769c1b0"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="55" height="15" uuid="f0e37136-4d6b-4d0e-95a8-050abab37574"/>
+				<text><![CDATA[devoluciones_aux_Id_aux]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="55" y="19" width="55" height="15" uuid="7865fa60-1a5c-4471-884f-960379a698fb"/>
+				<text><![CDATA[devoluciones_aux_Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="110" y="19" width="55" height="15" uuid="50a2cdcb-bfec-42a3-a0cd-0807ad6152f6"/>
+				<text><![CDATA[devoluciones_aux_Amecop]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="165" y="19" width="55" height="15" uuid="8e6a5719-4a76-4709-a76b-50321e196b1e"/>
+				<text><![CDATA[devoluciones_aux_Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="220" y="19" width="55" height="15" uuid="138db2e1-6541-47c6-b7e3-c7afaf0a2ffb"/>
+				<text><![CDATA[devoluciones_aux_Piezas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="275" y="19" width="55" height="15" uuid="38f4efda-b760-469a-8907-3d59c91529a1"/>
+				<text><![CDATA[devoluciones_aux_Costo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="330" y="19" width="55" height="15" uuid="0314fac6-30b1-4421-81c5-908619b81cf4"/>
+				<text><![CDATA[devoluciones_aux_Importe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="385" y="19" width="55" height="15" uuid="1bfd2b7b-a48c-461f-98f9-66366022fc92"/>
+				<text><![CDATA[devoluciones_aux_Iva]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="440" y="19" width="55" height="15" uuid="a8967a35-c754-478d-8d97-2879ec4a5bd6"/>
+				<text><![CDATA[devoluciones_aux_Descuentos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="495" y="19" width="55" height="15" uuid="7d8c4023-f61d-4e29-a482-7f3d52b6641a"/>
+				<text><![CDATA[devoluciones_aux_Total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="881b2902-ff09-49d8-ab4f-c625e6600877"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="55" height="15" uuid="6d9ff944-b737-4197-b537-e75e22a5828a"/>
+				<textFieldExpression><![CDATA[$F{devoluciones_aux_Id_aux}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="55" y="0" width="55" height="15" uuid="6e26a108-ed99-42bd-bbf1-7312080346ff"/>
+				<textFieldExpression><![CDATA[$F{devoluciones_aux_Fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="110" y="0" width="55" height="15" uuid="d3d71d74-bcc7-4e13-b03e-73e66da84648"/>
+				<textFieldExpression><![CDATA[$F{devoluciones_aux_Amecop}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="165" y="0" width="55" height="15" uuid="1f564760-adce-4c9c-ba9f-b79c1686b2cd"/>
+				<textFieldExpression><![CDATA[$F{devoluciones_aux_Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="220" y="0" width="55" height="15" uuid="b6b19b4e-5bae-4406-abb3-defabd168378"/>
+				<textFieldExpression><![CDATA[$F{devoluciones_aux_Piezas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="275" y="0" width="55" height="15" uuid="7c1e88e2-ec3e-45f6-8131-4e0370311b8f"/>
+				<textFieldExpression><![CDATA[$F{devoluciones_aux_Costo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="330" y="0" width="55" height="15" uuid="f0040f01-6574-4246-a111-a966c1e8c8ca"/>
+				<textFieldExpression><![CDATA[$F{devoluciones_aux_Importe}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="385" y="0" width="55" height="15" uuid="1c4b9107-f423-4d3d-b82e-db9ab5a0fdce"/>
+				<textFieldExpression><![CDATA[$F{devoluciones_aux_Iva}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="440" y="0" width="55" height="15" uuid="7d11a3f3-4070-471b-b5d1-6ab08c7ef19a"/>
+				<textFieldExpression><![CDATA[$F{devoluciones_aux_Descuentos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="495" y="0" width="55" height="15" uuid="6151672a-b294-4f62-92c0-314774c406cf"/>
+				<textFieldExpression><![CDATA[$F{devoluciones_aux_Total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="f925d3db-4d5d-427e-844d-8465f189d489"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="dfab2cbb-68f2-43d5-ac51-27b70a2d426f"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="f627d3ea-106c-4860-ac45-e18f6551eb9c"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="08f808bb-1692-4b7a-80cc-1e122c5723fa"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

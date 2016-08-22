@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="compras_aux" language="groovy" pageWidth="555" pageHeight="802" columnWidth="535" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="012bce55-a12a-4695-9ae0-5b6d7a99a7ef">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     compras_aux.`Id_aux` AS compras_aux_Id_aux,
+     compras_aux.`Amecop` AS compras_aux_Amecop,
+     compras_aux.`Nombre` AS compras_aux_Nombre,
+     compras_aux.`Piezas` AS compras_aux_Piezas,
+     compras_aux.`Costo` AS compras_aux_Costo,
+     compras_aux.`Oferta` AS compras_aux_Oferta,
+     compras_aux.`Iva` AS compras_aux_Iva,
+     compras_aux.`Descuento` AS compras_aux_Descuento,
+     compras_aux.`Total` AS compras_aux_Total,
+     compras_aux.`Existencias` AS compras_aux_Existencias,
+     compras_aux.`Venta` AS compras_aux_Venta,
+     compras_aux.`Sector` AS compras_aux_Sector
+FROM
+     `compras_aux` compras_aux]]>
+	</queryString>
+	<field name="compras_aux_Id_aux" class="java.lang.Integer"/>
+	<field name="compras_aux_Amecop" class="java.lang.String"/>
+	<field name="compras_aux_Nombre" class="java.lang.String"/>
+	<field name="compras_aux_Piezas" class="java.lang.Integer"/>
+	<field name="compras_aux_Costo" class="java.lang.Double"/>
+	<field name="compras_aux_Oferta" class="java.lang.Double"/>
+	<field name="compras_aux_Iva" class="java.lang.Double"/>
+	<field name="compras_aux_Descuento" class="java.lang.Double"/>
+	<field name="compras_aux_Total" class="java.lang.Double"/>
+	<field name="compras_aux_Existencias" class="java.lang.Integer"/>
+	<field name="compras_aux_Venta" class="java.lang.Integer"/>
+	<field name="compras_aux_Sector" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="90d2bfcb-5d60-4741-835c-dedb0d295758"/>
+				<imageExpression><![CDATA["leaf_banner_gray.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="4ffb58b0-4870-4dc7-a6f7-392fad5f61f6"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Leaf Gray Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="117" y="46" width="157" height="22" uuid="04f1fab0-fc77-4c93-8d80-288b6e0d1b72"/>
+				<text><![CDATA[Leaf Gray SubTitle]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="ab9cb6ea-3343-43b8-a672-7756af9ace61"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="46" height="15" uuid="46df02ec-46fc-4553-a636-41482d828ba5"/>
+				<text><![CDATA[compras_aux_Id_aux]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="46" y="19" width="46" height="15" uuid="2d08a685-57d8-49ae-9121-69b2aaf27ebf"/>
+				<text><![CDATA[compras_aux_Amecop]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="92" y="19" width="46" height="15" uuid="0e752774-f577-4610-8ae5-80d2e3eb6142"/>
+				<text><![CDATA[compras_aux_Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="138" y="19" width="46" height="15" uuid="1ba4a02d-772a-4749-9bfe-99019761bb26"/>
+				<text><![CDATA[compras_aux_Piezas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="184" y="19" width="46" height="15" uuid="251d445a-c0c0-4b6f-a888-529280f2f43e"/>
+				<text><![CDATA[compras_aux_Costo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="230" y="19" width="46" height="15" uuid="b8cb1706-fa94-4060-bf3a-b9b09255d80f"/>
+				<text><![CDATA[compras_aux_Oferta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="276" y="19" width="46" height="15" uuid="5616992c-3994-413d-a113-01ea52aa9118"/>
+				<text><![CDATA[compras_aux_Iva]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="322" y="19" width="46" height="15" uuid="6f7d8141-acfe-49b9-80b2-a0f02217127f"/>
+				<text><![CDATA[compras_aux_Descuento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="368" y="19" width="46" height="15" uuid="1b0bd74f-916f-4324-8d63-b5d2f9506dae"/>
+				<text><![CDATA[compras_aux_Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="414" y="19" width="46" height="15" uuid="2ee6e8cf-84ff-49cb-8459-547bef817d00"/>
+				<text><![CDATA[compras_aux_Existencias]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="460" y="19" width="46" height="15" uuid="94c581da-6020-4303-a637-2387ecc26c84"/>
+				<text><![CDATA[compras_aux_Venta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="506" y="19" width="46" height="15" uuid="2b35b06b-595c-4778-a250-13764f8b4607"/>
+				<text><![CDATA[compras_aux_Sector]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="4c32b881-92df-4d31-b5ac-36da8ee58f2d"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="46" height="15" uuid="e22a825d-0aaa-4f9f-9322-90f89f1fd2e5"/>
+				<textFieldExpression><![CDATA[$F{compras_aux_Id_aux}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="46" y="0" width="46" height="15" uuid="3422173c-461e-4d6a-9221-a84a7427b4fd"/>
+				<textFieldExpression><![CDATA[$F{compras_aux_Amecop}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="92" y="0" width="46" height="15" uuid="2835dbdd-6aa6-42dd-9e4d-6c534e915482"/>
+				<textFieldExpression><![CDATA[$F{compras_aux_Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="138" y="0" width="46" height="15" uuid="fdd22039-58ce-40cf-8477-f453ab6dc3a7"/>
+				<textFieldExpression><![CDATA[$F{compras_aux_Piezas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="184" y="0" width="46" height="15" uuid="0002eb95-a43b-46d9-ab5f-c9d8e4eff973"/>
+				<textFieldExpression><![CDATA[$F{compras_aux_Costo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="230" y="0" width="46" height="15" uuid="92f0f76b-6f0c-433c-8ca8-72a5637b7278"/>
+				<textFieldExpression><![CDATA[$F{compras_aux_Oferta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="276" y="0" width="46" height="15" uuid="6771eb6d-19d9-4be7-9f44-785790990bcf"/>
+				<textFieldExpression><![CDATA[$F{compras_aux_Iva}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="322" y="0" width="46" height="15" uuid="5a3bb482-f35d-41ce-8551-b913551c67e2"/>
+				<textFieldExpression><![CDATA[$F{compras_aux_Descuento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="368" y="0" width="46" height="15" uuid="69b4e7c5-65a2-45ad-9229-ed4a13fc5f75"/>
+				<textFieldExpression><![CDATA[$F{compras_aux_Total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="414" y="0" width="46" height="15" uuid="83410b92-e677-4759-9653-25001b80c25e"/>
+				<textFieldExpression><![CDATA[$F{compras_aux_Existencias}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="460" y="0" width="46" height="15" uuid="cf3d153d-563f-4e81-bca8-05af9b9d32dc"/>
+				<textFieldExpression><![CDATA[$F{compras_aux_Venta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="506" y="0" width="46" height="15" uuid="69af9835-8a95-40ef-877b-f3f027d50258"/>
+				<textFieldExpression><![CDATA[$F{compras_aux_Sector}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="81acba0e-11a0-466c-9843-7239c04aeadf"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="34f63d5e-fd9a-4625-a447-e67cb0f8109b"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="5f045b19-de76-4ff1-94a0-6637d14ca853"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="bcc920ea-a84a-4285-8018-6d4079006306"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

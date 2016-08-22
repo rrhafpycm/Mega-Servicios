@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0f489da1-5f05-43ea-9c71-a2533487c526">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\Cañita\\Documents\\NetBeansProjects\\MegaServicios\\src\\megaservicios\\reportes\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     compras.`Id` AS compras_Id,
+     compras.`Fecha` AS compras_Fecha,
+     compras.`Folio` AS compras_Folio,
+     compras.`Estado` AS compras_Estado,
+     compras.`Factura` AS compras_Factura,
+     compras.`Suma` AS compras_Suma
+FROM
+     `compras` compras]]>
+	</queryString>
+	<field name="compras_Id" class="java.lang.Integer"/>
+	<field name="compras_Fecha" class="java.sql.Date"/>
+	<field name="compras_Folio" class="java.lang.Integer"/>
+	<field name="compras_Estado" class="java.lang.String"/>
+	<field name="compras_Factura" class="java.lang.Integer"/>
+	<field name="compras_Suma" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="aa511ee8-50f1-4d00-ae03-a97655177d63"/>
+				<imageExpression><![CDATA["leaf_banner_green.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="288" height="33" uuid="f6e99e75-2729-482c-8988-112b82504677"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Mega Servicios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="74" y="46" width="214" height="22" uuid="5289d237-56bc-40d6-a4d4-6d6f656c9c65"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Compras]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="fa90181f-ade1-4a24-be90-ef5fec595fee"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="92" height="15" uuid="eca38943-b035-45bc-96b4-cd4eec25971b"/>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="92" y="19" width="92" height="15" uuid="8c2bdb77-b5a5-4c09-95a5-f9b1c8c7988b"/>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="184" y="19" width="92" height="15" uuid="f5a2fcba-28bb-4a9a-9191-56594fbf8455"/>
+				<text><![CDATA[Folio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="276" y="19" width="92" height="15" uuid="0f3b4749-747b-4dfb-8f13-9ca09e012e6a"/>
+				<text><![CDATA[Estado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="368" y="19" width="92" height="15" uuid="17a52fa0-0c5a-4686-93f5-b89aa1c80286"/>
+				<text><![CDATA[Factura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="460" y="19" width="92" height="15" uuid="29491ddc-b9fa-4548-9036-e8cd4efcf2aa"/>
+				<text><![CDATA[Suma]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="2881dc82-a1c9-4cd2-ae37-9b92ab6d3f10"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="92" height="15" uuid="3780c5a1-3c99-435d-96df-ad8d93220405"/>
+				<textFieldExpression><![CDATA[$F{compras_Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="92" y="0" width="92" height="15" uuid="a6f2f5a2-669e-48c3-bd36-50b562dcf06f"/>
+				<textFieldExpression><![CDATA[$F{compras_Fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="184" y="0" width="92" height="15" uuid="fed90aba-aabf-447f-9229-ed026dca1285"/>
+				<textFieldExpression><![CDATA[$F{compras_Folio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="276" y="0" width="92" height="15" uuid="1c581510-a932-4424-b74d-dfbff3324327"/>
+				<textFieldExpression><![CDATA[$F{compras_Estado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="368" y="0" width="92" height="15" uuid="956e2410-3a52-44b4-92a0-53b234c47941"/>
+				<textFieldExpression><![CDATA[$F{compras_Factura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="460" y="0" width="92" height="15" uuid="71e0027c-8cb6-4e1e-99cf-aa7eaad3f5ae"/>
+				<textFieldExpression><![CDATA[$F{compras_Suma}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="34458258-6a8d-427a-a2a9-aaabaeda34a4"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<subreport>
+				<reportElement x="2" y="4" width="550" height="41" uuid="034eb3b6-52f0-41fc-9714-f5dcdf677b7d"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "compras_aux.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="54980e7a-7a5b-4803-9888-4e708278ba9a"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="0c0592e8-fbc0-4363-a210-1c20fbd036d5"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="8ab8a144-d071-4d21-ad80-f762fbd27a5d"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

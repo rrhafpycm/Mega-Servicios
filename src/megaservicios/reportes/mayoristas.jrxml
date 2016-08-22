@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="abe3a5da-4e7a-4e61-8805-5e7397b88397">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     mayoristas.`Id` AS mayoristas_Id,
+     mayoristas.`Mayorista` AS mayoristas_Mayorista,
+     mayoristas.`Nombre` AS mayoristas_Nombre,
+     mayoristas.`Calle` AS mayoristas_Calle,
+     mayoristas.`Colonia` AS mayoristas_Colonia,
+     mayoristas.`Poblacion` AS mayoristas_Poblacion,
+     mayoristas.`CP` AS mayoristas_CP,
+     mayoristas.`Telefono` AS mayoristas_Telefono,
+     mayoristas.`Num_Compañia` AS mayoristas_Num_Compañia,
+     mayoristas.`RFC` AS mayoristas_RFC,
+     mayoristas.`Vendedor` AS mayoristas_Vendedor,
+     mayoristas.`Cuenta` AS mayoristas_Cuenta,
+     mayoristas.`Filial` AS mayoristas_Filial,
+     mayoristas.`Plazo` AS mayoristas_Plazo,
+     mayoristas.`Descuento` AS mayoristas_Descuento
+FROM
+     `mayoristas` mayoristas]]>
+	</queryString>
+	<field name="mayoristas_Id" class="java.lang.Integer"/>
+	<field name="mayoristas_Mayorista" class="java.lang.String"/>
+	<field name="mayoristas_Nombre" class="java.lang.String"/>
+	<field name="mayoristas_Calle" class="java.lang.String"/>
+	<field name="mayoristas_Colonia" class="java.lang.String"/>
+	<field name="mayoristas_Poblacion" class="java.lang.String"/>
+	<field name="mayoristas_CP" class="java.lang.Integer"/>
+	<field name="mayoristas_Telefono" class="java.lang.Integer"/>
+	<field name="mayoristas_Num_Compañia" class="java.lang.Integer"/>
+	<field name="mayoristas_RFC" class="java.lang.String"/>
+	<field name="mayoristas_Vendedor" class="java.lang.String"/>
+	<field name="mayoristas_Cuenta" class="java.lang.Integer"/>
+	<field name="mayoristas_Filial" class="java.lang.String"/>
+	<field name="mayoristas_Plazo" class="java.lang.String"/>
+	<field name="mayoristas_Descuento" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="b2cbdf78-f0b3-477a-906e-5b09d1434a61"/>
+				<imageExpression><![CDATA["leaf_banner_green.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="288" height="33" uuid="070563ee-df6f-4ecf-82d3-20b26e32bab6"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Mega Servicios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="71" y="46" width="217" height="22" uuid="6fd6a9c8-6209-4e63-8fe5-830b80c15fa0"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Mayoristas]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="c1f535b3-55b3-46b5-962d-57621becc8ad"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="37" height="15" uuid="d4d2632b-d8cf-4b18-a3b0-03be9cf63ddf"/>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="37" y="19" width="37" height="15" uuid="50820489-8062-4808-855b-6df5da41731b"/>
+				<text><![CDATA[Mayorista]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="74" y="19" width="37" height="15" uuid="765ded76-d254-4b21-a716-5fedaff9864b"/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="111" y="19" width="37" height="15" uuid="2f83e020-b068-49c4-a668-ab5445f78458"/>
+				<text><![CDATA[Calle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="148" y="19" width="37" height="15" uuid="f6f6bada-0a43-44f9-a025-6258b567d4c0"/>
+				<text><![CDATA[Colonia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="185" y="19" width="37" height="15" uuid="040e4bd0-6ace-4cb4-bb18-afc56e4ec3f1"/>
+				<text><![CDATA[Poblacion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="222" y="19" width="37" height="15" uuid="8f9037dd-dc75-4e62-9d27-25249661c627"/>
+				<text><![CDATA[CP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="259" y="19" width="37" height="15" uuid="724f9f53-393d-4664-9138-a807ca3fd89f"/>
+				<text><![CDATA[Telefono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="296" y="19" width="37" height="15" uuid="e6a90a0d-c10b-4263-9052-d966bda6dce3"/>
+				<text><![CDATA[Num_Compañia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="333" y="19" width="37" height="15" uuid="c3e71835-263d-4e9f-87af-576822e22462"/>
+				<text><![CDATA[RFC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="370" y="19" width="37" height="15" uuid="a04003e4-a15f-4426-b606-8efff37bbe68"/>
+				<text><![CDATA[Vendedor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="407" y="19" width="37" height="15" uuid="30b59b01-f15d-4f7a-b3c9-9c227d7107d8"/>
+				<text><![CDATA[Cuenta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="444" y="19" width="37" height="15" uuid="ab149bb6-f298-447d-9b25-1e1f86ec44c8"/>
+				<text><![CDATA[Filial]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="481" y="19" width="37" height="15" uuid="d771b23f-7f13-4ad1-a59b-e3662d6d129c"/>
+				<text><![CDATA[Plazo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="518" y="19" width="37" height="15" uuid="6d87be69-948c-469d-bb56-198932b82a76"/>
+				<text><![CDATA[Descuento]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="42d75484-3311-4899-b32f-c21fa39594df"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="37" height="15" uuid="a69fdee4-60ab-49ab-a897-3c1667a91ef4"/>
+				<textFieldExpression><![CDATA[$F{mayoristas_Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="37" y="0" width="37" height="15" uuid="8b4c2144-644f-410e-8366-fa4f181b9bed"/>
+				<textFieldExpression><![CDATA[$F{mayoristas_Mayorista}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="74" y="0" width="37" height="15" uuid="821f563d-2e7f-4502-a301-6c8d24ab8a58"/>
+				<textFieldExpression><![CDATA[$F{mayoristas_Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="111" y="0" width="37" height="15" uuid="4c2512c7-c955-43cb-8d7e-47f0d6d7b5f9"/>
+				<textFieldExpression><![CDATA[$F{mayoristas_Calle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="148" y="0" width="37" height="15" uuid="3fca3638-8f46-4870-9497-4b57547fd059"/>
+				<textFieldExpression><![CDATA[$F{mayoristas_Colonia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="185" y="0" width="37" height="15" uuid="dcb4b279-db8a-4121-a373-d42533c94b86"/>
+				<textFieldExpression><![CDATA[$F{mayoristas_Poblacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="222" y="0" width="37" height="15" uuid="4afd63aa-0adf-4325-a525-35f2d0cf56b6"/>
+				<textFieldExpression><![CDATA[$F{mayoristas_CP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="259" y="0" width="37" height="15" uuid="5646ba83-3afb-47e3-88f2-8e9f72ccdd16"/>
+				<textFieldExpression><![CDATA[$F{mayoristas_Telefono}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="296" y="0" width="37" height="15" uuid="61e18fd2-4ed0-4460-9303-15a245b77c7f"/>
+				<textFieldExpression><![CDATA[$F{mayoristas_Num_Compañia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="333" y="0" width="37" height="15" uuid="925c717e-d1f0-46d1-970b-dda50b2e4c18"/>
+				<textFieldExpression><![CDATA[$F{mayoristas_RFC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="370" y="0" width="37" height="15" uuid="30c2a668-b2f6-42a3-a76a-2df2188589b3"/>
+				<textFieldExpression><![CDATA[$F{mayoristas_Vendedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="407" y="0" width="37" height="15" uuid="a2a78348-3707-4383-97df-e533dba13e64"/>
+				<textFieldExpression><![CDATA[$F{mayoristas_Cuenta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="444" y="0" width="37" height="15" uuid="8cb15cac-619f-4a93-962a-9fe516c3f6e2"/>
+				<textFieldExpression><![CDATA[$F{mayoristas_Filial}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="481" y="0" width="37" height="15" uuid="9a059e6c-bdad-4eaf-8943-4c393bcdb8df"/>
+				<textFieldExpression><![CDATA[$F{mayoristas_Plazo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="518" y="0" width="37" height="15" uuid="6a58e9ed-26da-4da3-8c23-188c40e61c0e"/>
+				<textFieldExpression><![CDATA[$F{mayoristas_Descuento}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="6e0695bd-4676-4ead-abe9-3d5c95b73364"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="e2f95cb0-bc57-4971-b475-768d08e64533"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="9e7b6dfb-4a84-4961-881b-e80983c0ab0d"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="d28397c7-6e11-47d1-93e4-f5644b19ca9a"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

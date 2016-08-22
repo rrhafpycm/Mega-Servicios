@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="mermas_aux" language="groovy" pageWidth="555" pageHeight="802" columnWidth="535" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="b6c61366-a9e0-4b01-8a54-9fb15e263afe">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     mermas_aux.`Id_aux` AS mermas_aux_Id_aux,
+     mermas_aux.`Fecha` AS mermas_aux_Fecha,
+     mermas_aux.`Amecop` AS mermas_aux_Amecop,
+     mermas_aux.`Nombre` AS mermas_aux_Nombre,
+     mermas_aux.`Piezas` AS mermas_aux_Piezas,
+     mermas_aux.`Precio` AS mermas_aux_Precio,
+     mermas_aux.`Total` AS mermas_aux_Total
+FROM
+     `mermas_aux` mermas_aux]]>
+	</queryString>
+	<field name="mermas_aux_Id_aux" class="java.lang.Integer"/>
+	<field name="mermas_aux_Fecha" class="java.sql.Date"/>
+	<field name="mermas_aux_Amecop" class="java.lang.String"/>
+	<field name="mermas_aux_Nombre" class="java.lang.String"/>
+	<field name="mermas_aux_Piezas" class="java.lang.Integer"/>
+	<field name="mermas_aux_Precio" class="java.lang.Double"/>
+	<field name="mermas_aux_Total" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="5cb97e09-ffb2-4030-bf77-5c6f6beb5090"/>
+				<imageExpression><![CDATA["leaf_banner_gray.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="94945345-31c3-4e79-957b-a17b5496a80f"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Leaf Gray Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="117" y="46" width="157" height="22" uuid="9eb37181-4c0b-4d48-87a6-8c1624a9038f"/>
+				<text><![CDATA[Leaf Gray SubTitle]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="fb9ecc03-6707-484c-8152-070dcdc33421"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="79" height="15" uuid="de0a001f-954d-4a2f-b181-f375cb721384"/>
+				<text><![CDATA[mermas_aux_Id_aux]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="79" y="19" width="79" height="15" uuid="a698d54b-b7b8-4c39-b522-b19a056dd4b6"/>
+				<text><![CDATA[mermas_aux_Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="158" y="19" width="79" height="15" uuid="afa6f824-2d12-45b1-b40a-15b7297a3d76"/>
+				<text><![CDATA[mermas_aux_Amecop]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="237" y="19" width="79" height="15" uuid="6d830dc9-01d1-48ca-9887-3effae85a038"/>
+				<text><![CDATA[mermas_aux_Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="316" y="19" width="79" height="15" uuid="3c23507a-17f0-4edf-b47d-731c6aff90e3"/>
+				<text><![CDATA[mermas_aux_Piezas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="395" y="19" width="79" height="15" uuid="a59b272e-86d4-4a75-80c4-4d482ef1d7af"/>
+				<text><![CDATA[mermas_aux_Precio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="474" y="19" width="79" height="15" uuid="cd205f48-c070-4a4f-a239-da84ede54704"/>
+				<text><![CDATA[mermas_aux_Total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="3709ad35-dd6e-4f51-9436-cf00123ed0d5"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="79" height="15" uuid="b35daf90-7f33-4cbe-8514-706f8d42aa49"/>
+				<textFieldExpression><![CDATA[$F{mermas_aux_Id_aux}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="79" y="0" width="79" height="15" uuid="ee1158da-9e02-4eb3-a7c8-bdaeb8ac9bc2"/>
+				<textFieldExpression><![CDATA[$F{mermas_aux_Fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="158" y="0" width="79" height="15" uuid="3485fcb3-e93f-4979-b91c-390c0b954a24"/>
+				<textFieldExpression><![CDATA[$F{mermas_aux_Amecop}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="237" y="0" width="79" height="15" uuid="62a8323c-b8e7-4f13-806f-84f322cace40"/>
+				<textFieldExpression><![CDATA[$F{mermas_aux_Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="316" y="0" width="79" height="15" uuid="967acce6-9a1c-46a9-84a2-18f355ca9dc3"/>
+				<textFieldExpression><![CDATA[$F{mermas_aux_Piezas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="395" y="0" width="79" height="15" uuid="7cd35834-1166-43e1-bf40-86657554d321"/>
+				<textFieldExpression><![CDATA[$F{mermas_aux_Precio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="474" y="0" width="79" height="15" uuid="5957c6dc-4de6-427c-9db9-c2196781e048"/>
+				<textFieldExpression><![CDATA[$F{mermas_aux_Total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="1a43301c-e4df-44b3-8096-732448738f07"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="dfa767ff-6aaf-458d-9717-57dfd69304cd"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="24f3fbfd-da65-4e16-9e8e-f0a83acc1ffe"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="83ca80db-2b1a-403c-9811-e3c3b991b7ce"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

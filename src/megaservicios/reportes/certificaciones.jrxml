@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6b46d764-881d-4301-a197-7d01c09350ed">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\Cañita\\Documents\\NetBeansProjects\\MegaServicios\\src\\megaservicios\\reportes\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     certificaciones.`Id` AS certificaciones_Id,
+     certificaciones.`Caja` AS certificaciones_Caja,
+     certificaciones.`Folio` AS certificaciones_Folio,
+     certificaciones.`Fecha` AS certificaciones_Fecha,
+     certificaciones.`Estado` AS certificaciones_Estado,
+     certificaciones.`Amecop` AS certificaciones_Amecop,
+     certificaciones.`Piezas` AS certificaciones_Piezas,
+     certificaciones.`Suma` AS certificaciones_Suma
+FROM
+     `certificaciones` certificaciones]]>
+	</queryString>
+	<field name="certificaciones_Id" class="java.lang.Integer"/>
+	<field name="certificaciones_Caja" class="java.lang.Integer"/>
+	<field name="certificaciones_Folio" class="java.lang.Integer"/>
+	<field name="certificaciones_Fecha" class="java.sql.Date"/>
+	<field name="certificaciones_Estado" class="java.lang.String"/>
+	<field name="certificaciones_Amecop" class="java.lang.String"/>
+	<field name="certificaciones_Piezas" class="java.lang.Integer"/>
+	<field name="certificaciones_Suma" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="34736785-e8e6-4f10-9f8c-c5656fa520e9"/>
+				<imageExpression><![CDATA["leaf_banner_green.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="288" height="33" uuid="e3b4e5df-8b26-4961-a059-207779d64794"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Mega Servicios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="73" y="46" width="215" height="22" uuid="85b5d822-225c-4341-9b5b-0fedc294a972"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Certificaciones]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="9d85a688-2cce-41be-a587-777895aeec99"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="69" height="15" uuid="72c37aa3-77e4-48cc-9d67-8e61c068317c"/>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="69" y="19" width="69" height="15" uuid="d98f81f2-073f-41fe-8378-cf4821798265"/>
+				<text><![CDATA[Caja]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="138" y="19" width="69" height="15" uuid="2594337e-a41b-4c82-a051-fd8d8ce77ba7"/>
+				<text><![CDATA[Folio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="207" y="19" width="69" height="15" uuid="2ac42c73-3a85-4212-b9f3-599c0e5b55d9"/>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="276" y="19" width="69" height="15" uuid="224a485e-7d1c-433d-b372-b5b8aba8e197"/>
+				<text><![CDATA[Estado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="345" y="19" width="69" height="15" uuid="8435783e-fd13-4817-805d-3cf3ced7d965"/>
+				<text><![CDATA[Amecop]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="414" y="19" width="69" height="15" uuid="8a1ca9db-d39d-44f1-b52b-c644cd974c8d"/>
+				<text><![CDATA[Piezas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="483" y="19" width="69" height="15" uuid="c3b55caa-4e92-48f6-a906-1cc60ed81948"/>
+				<text><![CDATA[Suma]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="439c16cf-2cb7-4071-a069-1a9ae8efb622"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="69" height="15" uuid="913eca07-7f60-448b-90d4-7f13763c6149"/>
+				<textFieldExpression><![CDATA[$F{certificaciones_Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="69" y="0" width="69" height="15" uuid="14c0e804-a86f-4e3a-bb6f-740b881e78dc"/>
+				<textFieldExpression><![CDATA[$F{certificaciones_Caja}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="138" y="0" width="69" height="15" uuid="bd990e19-3cfa-4f5f-b14b-b17a91919380"/>
+				<textFieldExpression><![CDATA[$F{certificaciones_Folio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="207" y="0" width="69" height="15" uuid="057bee6d-a117-425e-865c-e6cd5b027a3b"/>
+				<textFieldExpression><![CDATA[$F{certificaciones_Fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="276" y="0" width="69" height="15" uuid="420ab716-70da-441e-ab56-8d4c7e3fb6dd"/>
+				<textFieldExpression><![CDATA[$F{certificaciones_Estado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="345" y="0" width="69" height="15" uuid="4f26c98e-1389-4ba0-8a5c-3624fc60aa81"/>
+				<textFieldExpression><![CDATA[$F{certificaciones_Amecop}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="414" y="0" width="69" height="15" uuid="3fa3afd1-41a1-47cf-a641-31d7e5410a9f"/>
+				<textFieldExpression><![CDATA[$F{certificaciones_Piezas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="483" y="0" width="69" height="15" uuid="69df2f08-27ec-40e2-9497-46971d49df80"/>
+				<textFieldExpression><![CDATA[$F{certificaciones_Suma}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="98d12aef-4062-4b53-9c14-4716ce98ce29"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<subreport>
+				<reportElement x="0" y="0" width="553" height="45" uuid="7a95e29a-a9e2-4634-9d15-1660d3e6b4b7"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "certificaciones_aux.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="a9ba7d41-320f-482d-ac5c-ca19e1d525cb"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="24a104e7-5013-4647-bc95-e1af482821f9"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="f87414b0-14ad-4466-9c04-73bf18ba90f5"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

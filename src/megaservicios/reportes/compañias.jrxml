@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4cb8ccc6-6b75-4086-9646-9251b9edf868">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="4"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     compañias.`Id` AS compañias_Id,
+     compañias.`Compañia` AS compañias_Compañia,
+     compañias.`Nombre` AS compañias_Nombre,
+     compañias.`Calle` AS compañias_Calle,
+     compañias.`Colonia` AS compañias_Colonia,
+     compañias.`CP` AS compañias_CP,
+     compañias.`Poblacion` AS compañias_Poblacion,
+     compañias.`Telefono` AS compañias_Telefono,
+     compañias.`Encargado` AS compañias_Encargado,
+     compañias.`RFC` AS compañias_RFC,
+     compañias.`Reg_SSA` AS compañias_Reg_SSA,
+     compañias.`Desc_Normal` AS compañias_Desc_Normal,
+     compañias.`Desc_Maximo` AS compañias_Desc_Maximo,
+     compañias.`Inv_Minimo` AS compañias_Inv_Minimo,
+     compañias.`Inv_Maximo` AS compañias_Inv_Maximo,
+     compañias.`Margen_Utilidad` AS compañias_Margen_Utilidad
+FROM
+     `compañias` compañias]]>
+	</queryString>
+	<field name="compañias_Id" class="java.lang.Integer"/>
+	<field name="compañias_Compañia" class="java.lang.String"/>
+	<field name="compañias_Nombre" class="java.lang.String"/>
+	<field name="compañias_Calle" class="java.lang.String"/>
+	<field name="compañias_Colonia" class="java.lang.String"/>
+	<field name="compañias_CP" class="java.lang.Integer"/>
+	<field name="compañias_Poblacion" class="java.lang.String"/>
+	<field name="compañias_Telefono" class="java.lang.Integer"/>
+	<field name="compañias_Encargado" class="java.lang.String"/>
+	<field name="compañias_RFC" class="java.lang.String"/>
+	<field name="compañias_Reg_SSA" class="java.lang.String"/>
+	<field name="compañias_Desc_Normal" class="java.lang.Double"/>
+	<field name="compañias_Desc_Maximo" class="java.lang.Double"/>
+	<field name="compañias_Inv_Minimo" class="java.lang.Double"/>
+	<field name="compañias_Inv_Maximo" class="java.lang.Double"/>
+	<field name="compañias_Margen_Utilidad" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="b4f56287-a42d-412f-b370-fca8c066f4cb"/>
+				<imageExpression><![CDATA["leaf_banner_green.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="284" height="33" uuid="70af5a2f-a47c-4941-afd9-04a9a6977b53"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Mega Servicios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="71" y="46" width="213" height="22" uuid="4d880f93-dde5-488f-a221-8d6ccf0f17ed"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Compañias]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="0ea828fe-7e76-492b-baf5-75a8acf345de"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="34" height="15" uuid="1d643e33-2a43-4a3b-a2f0-d997493dc5bc"/>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="34" y="19" width="34" height="15" uuid="850dfd34-6101-465f-b069-de0d69a00937"/>
+				<text><![CDATA[Compañia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="68" y="19" width="34" height="15" uuid="83bd79a9-ca8c-4c0e-ac2e-96b492796767"/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="102" y="19" width="34" height="15" uuid="64509702-9f17-4f84-8e34-6de03b5e72b6"/>
+				<text><![CDATA[Calle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="136" y="19" width="34" height="15" uuid="81458cd0-6f41-4eac-8a46-43944dbe93c1"/>
+				<text><![CDATA[Colonia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="170" y="19" width="34" height="15" uuid="80ed0456-f7a4-4fed-98ac-292ce6aaa7e6"/>
+				<text><![CDATA[CP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="204" y="19" width="34" height="15" uuid="9df5863f-7df7-40b1-b3cd-65c45065e805"/>
+				<text><![CDATA[Poblacion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="238" y="19" width="34" height="15" uuid="39ea8cf2-112a-4077-99d2-4f76355504a6"/>
+				<text><![CDATA[Telefono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="272" y="19" width="34" height="15" uuid="1cf1b9de-0cc4-4ba0-a80e-01fc6d2c16ca"/>
+				<text><![CDATA[Encargado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="306" y="19" width="34" height="15" uuid="3399952f-6062-4f61-ab64-05432fb83915"/>
+				<text><![CDATA[RFC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="340" y="19" width="34" height="15" uuid="43bbf445-020d-4dbc-accf-d437aa9ab3b6"/>
+				<text><![CDATA[Reg_SSA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="374" y="19" width="34" height="15" uuid="3d1852cf-580a-4fbd-88be-0163b23a0329"/>
+				<text><![CDATA[Desc_Normal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="408" y="19" width="34" height="15" uuid="08eb043c-055a-4587-abdf-11771fa6a6af"/>
+				<text><![CDATA[Desc_Maximo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="442" y="19" width="34" height="15" uuid="7dee2d2f-d45a-4e99-8cdd-5691819564be"/>
+				<text><![CDATA[Inv_Minimo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="476" y="19" width="34" height="15" uuid="08a1e061-edaa-44b1-9b98-6d290e372a62"/>
+				<text><![CDATA[Inv_Maximo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="510" y="19" width="34" height="15" uuid="d6e90888-d83f-41e3-9d32-5a81d2c1086f"/>
+				<text><![CDATA[Margen_Utilidad]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="b5fe3b7e-592d-403a-87f7-78d788e1b7c6"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="34" height="15" uuid="2e78c29e-036d-44a6-9b0d-48deef760f05"/>
+				<textFieldExpression><![CDATA[$F{compañias_Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="34" y="0" width="34" height="15" uuid="f9358320-fbbf-4a2e-8248-4e30faebcaf1"/>
+				<textFieldExpression><![CDATA[$F{compañias_Compañia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="68" y="0" width="34" height="15" uuid="960867fe-fda5-440c-9c54-e1ed3b14f8e3"/>
+				<textFieldExpression><![CDATA[$F{compañias_Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="102" y="0" width="34" height="15" uuid="b8416379-cb04-492e-9ebb-349d89e061a8"/>
+				<textFieldExpression><![CDATA[$F{compañias_Calle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="136" y="0" width="34" height="15" uuid="df4bd3a3-991f-4500-8a51-70bb65e71da9"/>
+				<textFieldExpression><![CDATA[$F{compañias_Colonia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="170" y="0" width="34" height="15" uuid="27075549-60c8-4b29-94e0-990cdf413bfa"/>
+				<textFieldExpression><![CDATA[$F{compañias_CP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="204" y="0" width="34" height="15" uuid="999c4ebc-7c97-45b7-a80c-899de560421c"/>
+				<textFieldExpression><![CDATA[$F{compañias_Poblacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="238" y="0" width="34" height="15" uuid="dd7624ae-3d4c-427f-83d3-849c5865441a"/>
+				<textFieldExpression><![CDATA[$F{compañias_Telefono}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="272" y="0" width="34" height="15" uuid="dcfc7ac4-584a-442a-8349-5a50fcba8440"/>
+				<textFieldExpression><![CDATA[$F{compañias_Encargado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="306" y="0" width="34" height="15" uuid="34438eb6-9442-4cbf-9f8c-9a89001fccb4"/>
+				<textFieldExpression><![CDATA[$F{compañias_RFC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="340" y="0" width="34" height="15" uuid="c7c75266-5fc6-4022-80c5-328cb153d5b4"/>
+				<textFieldExpression><![CDATA[$F{compañias_Reg_SSA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="374" y="0" width="34" height="15" uuid="68363ad8-7b3e-4397-b5e8-33ce2e4b5d92"/>
+				<textFieldExpression><![CDATA[$F{compañias_Desc_Normal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="408" y="0" width="34" height="15" uuid="5f22b0dd-6d2a-4587-bf10-db4c19b55c50"/>
+				<textFieldExpression><![CDATA[$F{compañias_Desc_Maximo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="442" y="0" width="34" height="15" uuid="a4b06feb-8408-40a5-9fc7-811c192d93b1"/>
+				<textFieldExpression><![CDATA[$F{compañias_Inv_Minimo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="476" y="0" width="34" height="15" uuid="8bbea997-06e4-4a47-b508-2fe9aafc27c2"/>
+				<textFieldExpression><![CDATA[$F{compañias_Inv_Maximo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="510" y="0" width="34" height="15" uuid="37e38306-2e17-49ab-b4fd-bad1e6debc49"/>
+				<textFieldExpression><![CDATA[$F{compañias_Margen_Utilidad}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="7afff02e-ea12-485c-885c-5d3d08f84e85"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="fe665ae2-9f14-40c1-8b6a-b33b7c1ae643"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="3def5a57-4abd-45c5-8597-3a07246818b4"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="0e999266-edc4-43d1-8311-39791115c4b4"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

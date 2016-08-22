@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="consulta_ventas_aux" language="groovy" pageWidth="555" pageHeight="802" columnWidth="535" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="fd138cd8-f5cc-45ff-ab79-5d621de665e5">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     consulta_ventas_aux.`Id_aux` AS consulta_ventas_aux_Id_aux,
+     consulta_ventas_aux.`Amecop` AS consulta_ventas_aux_Amecop,
+     consulta_ventas_aux.`Nombre` AS consulta_ventas_aux_Nombre,
+     consulta_ventas_aux.`Piezas` AS consulta_ventas_aux_Piezas,
+     consulta_ventas_aux.`Precio` AS consulta_ventas_aux_Precio,
+     consulta_ventas_aux.`Importe` AS consulta_ventas_aux_Importe,
+     consulta_ventas_aux.`Iva` AS consulta_ventas_aux_Iva,
+     consulta_ventas_aux.`Descuento` AS consulta_ventas_aux_Descuento,
+     consulta_ventas_aux.`Total` AS consulta_ventas_aux_Total
+FROM
+     `consulta_ventas_aux` consulta_ventas_aux]]>
+	</queryString>
+	<field name="consulta_ventas_aux_Id_aux" class="java.lang.Integer"/>
+	<field name="consulta_ventas_aux_Amecop" class="java.lang.String"/>
+	<field name="consulta_ventas_aux_Nombre" class="java.lang.String"/>
+	<field name="consulta_ventas_aux_Piezas" class="java.lang.Integer"/>
+	<field name="consulta_ventas_aux_Precio" class="java.lang.Double"/>
+	<field name="consulta_ventas_aux_Importe" class="java.lang.Double"/>
+	<field name="consulta_ventas_aux_Iva" class="java.lang.Double"/>
+	<field name="consulta_ventas_aux_Descuento" class="java.lang.Double"/>
+	<field name="consulta_ventas_aux_Total" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="1fd1d9ac-3f01-407d-949b-59abef94df32"/>
+				<imageExpression><![CDATA["leaf_banner_gray.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="4a983c4d-cbb8-4cac-8448-957f3bf8da9f"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Leaf Gray Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="117" y="46" width="157" height="22" uuid="204b9aca-086f-43fc-bef2-7b70e75949a2"/>
+				<text><![CDATA[Leaf Gray SubTitle]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="f86b1d58-eb4a-494f-9ab6-ca51010d3d81"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="61" height="15" uuid="bf45df15-b701-4449-a390-79b3ec10a3f4"/>
+				<text><![CDATA[consulta_ventas_aux_Id_aux]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="61" y="19" width="61" height="15" uuid="b917e750-562f-438a-9aa9-2b428b986004"/>
+				<text><![CDATA[consulta_ventas_aux_Amecop]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="122" y="19" width="61" height="15" uuid="4f57bed2-5fb3-4eee-b334-0a00c07ce8c4"/>
+				<text><![CDATA[consulta_ventas_aux_Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="183" y="19" width="61" height="15" uuid="7f1cb344-fb53-4f8c-b47b-866dd8d96ec2"/>
+				<text><![CDATA[consulta_ventas_aux_Piezas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="244" y="19" width="61" height="15" uuid="5585b38f-0953-4ecf-8b07-ce3e6ecd449d"/>
+				<text><![CDATA[consulta_ventas_aux_Precio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="305" y="19" width="61" height="15" uuid="5e5c4ebb-6de8-484a-9af4-ec37c9b743dc"/>
+				<text><![CDATA[consulta_ventas_aux_Importe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="366" y="19" width="61" height="15" uuid="83f61473-afa4-4bd8-83f4-98f190ded283"/>
+				<text><![CDATA[consulta_ventas_aux_Iva]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="427" y="19" width="61" height="15" uuid="95f01217-dc3c-4418-a932-d81821ba51c7"/>
+				<text><![CDATA[consulta_ventas_aux_Descuento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="488" y="19" width="61" height="15" uuid="febbea8d-8095-4442-9674-fb6c1b00439c"/>
+				<text><![CDATA[consulta_ventas_aux_Total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="7f1f5c03-c9fe-4aa5-9595-e5981f39d9e6"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="61" height="15" uuid="53dac268-b543-46f0-ac2a-7a9f98bbf69f"/>
+				<textFieldExpression><![CDATA[$F{consulta_ventas_aux_Id_aux}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="61" y="0" width="61" height="15" uuid="c2ea262a-0783-4501-b635-6620ea57d752"/>
+				<textFieldExpression><![CDATA[$F{consulta_ventas_aux_Amecop}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="122" y="0" width="61" height="15" uuid="99d3aed5-d030-407f-8132-7f37013ccc23"/>
+				<textFieldExpression><![CDATA[$F{consulta_ventas_aux_Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="183" y="0" width="61" height="15" uuid="2c326872-eee0-4f81-b767-12594466eab1"/>
+				<textFieldExpression><![CDATA[$F{consulta_ventas_aux_Piezas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="244" y="0" width="61" height="15" uuid="9ce15e30-2d5c-4b9c-87a0-b7368370b564"/>
+				<textFieldExpression><![CDATA[$F{consulta_ventas_aux_Precio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="305" y="0" width="61" height="15" uuid="3d7a7300-2c1a-416a-8bf2-36fac37c743e"/>
+				<textFieldExpression><![CDATA[$F{consulta_ventas_aux_Importe}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="366" y="0" width="61" height="15" uuid="ab17357f-15a4-4325-99f9-ef188d02bb48"/>
+				<textFieldExpression><![CDATA[$F{consulta_ventas_aux_Iva}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="427" y="0" width="61" height="15" uuid="90938594-a4d6-4c4e-be86-2eba7256981c"/>
+				<textFieldExpression><![CDATA[$F{consulta_ventas_aux_Descuento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="488" y="0" width="61" height="15" uuid="9a0e69d6-e1fd-4ab4-b3fa-654854c6b637"/>
+				<textFieldExpression><![CDATA[$F{consulta_ventas_aux_Total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="782facf5-da04-463d-b9cc-d90b8282e9da"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="cebb995f-9d80-46ea-8f52-13bab02a814d"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="34865a6f-dbb8-429e-9847-032df8ee572a"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="0845660f-1c16-47ad-8294-adcf86e5d640"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

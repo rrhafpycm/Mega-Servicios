@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="057ac949-f6dd-45d2-8880-83bd1448d375">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     pagos.`Id` AS pagos_Id,
+     pagos.`Pago` AS pagos_Pago,
+     pagos.`Descripcion` AS pagos_Descripcion,
+     pagos.`Cuentas_Cobrar` AS pagos_Cuentas_Cobrar,
+     pagos.`Cheque` AS pagos_Cheque,
+     pagos.`Tipo_Cambio` AS pagos_Tipo_Cambio
+FROM
+     `pagos` pagos]]>
+	</queryString>
+	<field name="pagos_Id" class="java.lang.Integer"/>
+	<field name="pagos_Pago" class="java.lang.String"/>
+	<field name="pagos_Descripcion" class="java.lang.String"/>
+	<field name="pagos_Cuentas_Cobrar" class="java.lang.Integer"/>
+	<field name="pagos_Cheque" class="java.lang.Integer"/>
+	<field name="pagos_Tipo_Cambio" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="d5ebe003-4327-4047-9003-17bdb478b4ba"/>
+				<imageExpression><![CDATA["leaf_banner_green.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="288" height="33" uuid="d15b245a-0a33-4b6b-8a1e-6f03f531625b"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Mega Servicios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="71" y="46" width="217" height="22" uuid="d2be5127-70f5-42b5-ad7d-ffaddfe9b6a3"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Pagos]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="129a6a11-d85c-4dcd-a682-f225e53ae3e8"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="92" height="15" uuid="0eaeb20f-8f88-48d1-a46b-38b539b51322"/>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="92" y="19" width="92" height="15" uuid="575d399d-87f2-41ce-a3c0-4bd47503f2bf"/>
+				<text><![CDATA[Pago]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="184" y="19" width="92" height="15" uuid="12ed253b-1935-4a9d-8fda-aa32d39859e5"/>
+				<text><![CDATA[Descripcion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="276" y="19" width="92" height="15" uuid="d145c0fd-0cc7-4902-9bf7-1f4cbb25e2e0"/>
+				<text><![CDATA[Cuentas_Cobrar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="368" y="19" width="92" height="15" uuid="2b6823b4-286f-473a-ade0-6241d060cd85"/>
+				<text><![CDATA[Cheque]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="460" y="19" width="92" height="15" uuid="89053924-1f4f-464f-ad3e-4156bfa428e6"/>
+				<text><![CDATA[Tipo_Cambio]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="d5529016-2a1a-4f37-a95e-ac1d050a8ce3"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="92" height="15" uuid="298445b1-1750-442a-8db4-c71ae3b31c0c"/>
+				<textFieldExpression><![CDATA[$F{pagos_Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="92" y="0" width="92" height="15" uuid="b02fe37f-e8d3-459a-8439-5047cbe2e28b"/>
+				<textFieldExpression><![CDATA[$F{pagos_Pago}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="184" y="0" width="92" height="15" uuid="04ca5b41-7e47-4de4-aac6-585c31f19780"/>
+				<textFieldExpression><![CDATA[$F{pagos_Descripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="276" y="0" width="92" height="15" uuid="f354cbef-b060-4b79-99cb-da3b169a7578"/>
+				<textFieldExpression><![CDATA[$F{pagos_Cuentas_Cobrar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="368" y="0" width="92" height="15" uuid="128492ed-a6a7-4713-8e7c-37daf953665b"/>
+				<textFieldExpression><![CDATA[$F{pagos_Cheque}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="460" y="0" width="92" height="15" uuid="9ecc788d-5926-4fa3-8f46-7252011271b1"/>
+				<textFieldExpression><![CDATA[$F{pagos_Tipo_Cambio}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="119b1a0f-97b7-4a9b-8c7c-a025f31ba048"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="c5ec03b7-f4db-4783-b3e6-d9a6fd09c753"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="b6350045-260a-46e8-94a4-478657b9abb4"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="b27e1f48-322f-4016-9c18-d65369db3524"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

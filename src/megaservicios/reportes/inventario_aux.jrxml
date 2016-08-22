@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="inventario_aux" language="groovy" pageWidth="555" pageHeight="802" columnWidth="535" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="841e35ea-0f20-4a2c-bcbd-9ce1655e216c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     inventarios_aux.`Id_aux` AS inventarios_aux_Id_aux,
+     inventarios_aux.`Amecop` AS inventarios_aux_Amecop,
+     inventarios_aux.`Nombre` AS inventarios_aux_Nombre,
+     inventarios_aux.`Existencias` AS inventarios_aux_Existencias,
+     inventarios_aux.`Ajustes` AS inventarios_aux_Ajustes,
+     inventarios_aux.`Precio` AS inventarios_aux_Precio,
+     inventarios_aux.`Valor` AS inventarios_aux_Valor
+FROM
+     `inventarios_aux` inventarios_aux]]>
+	</queryString>
+	<field name="inventarios_aux_Id_aux" class="java.lang.Integer"/>
+	<field name="inventarios_aux_Amecop" class="java.lang.String"/>
+	<field name="inventarios_aux_Nombre" class="java.lang.String"/>
+	<field name="inventarios_aux_Existencias" class="java.lang.Integer"/>
+	<field name="inventarios_aux_Ajustes" class="java.lang.String"/>
+	<field name="inventarios_aux_Precio" class="java.lang.Double"/>
+	<field name="inventarios_aux_Valor" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="e52fef9e-36d7-413c-ae6c-33677841f487"/>
+				<imageExpression><![CDATA["leaf_banner_gray.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="e63ef7af-6728-437b-b42a-f20e122233b7"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Leaf Gray Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="117" y="46" width="157" height="22" uuid="b3d5558d-7fcd-4b75-8d51-907591492b95"/>
+				<text><![CDATA[Leaf Gray SubTitle]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="a8184fb9-3310-4fdc-a064-9c5822d98bf6"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="79" height="15" uuid="0fb16b31-3c3b-4093-8144-1c9f4f0703e1"/>
+				<text><![CDATA[inventarios_aux_Id_aux]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="79" y="19" width="79" height="15" uuid="466a55da-d6b7-451e-bafb-a965211b6003"/>
+				<text><![CDATA[inventarios_aux_Amecop]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="158" y="19" width="79" height="15" uuid="a1504604-175a-4e22-b921-c78f753e687c"/>
+				<text><![CDATA[inventarios_aux_Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="237" y="19" width="79" height="15" uuid="cd6339ec-c075-4697-9558-8e9b980cae66"/>
+				<text><![CDATA[inventarios_aux_Existencias]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="316" y="19" width="79" height="15" uuid="2c945562-c46e-46eb-b00f-caa134c53f4c"/>
+				<text><![CDATA[inventarios_aux_Ajustes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="395" y="19" width="79" height="15" uuid="22782801-1637-4d92-a23c-e7939a883a58"/>
+				<text><![CDATA[inventarios_aux_Precio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="474" y="19" width="79" height="15" uuid="7772d0b5-5c69-408d-9e3d-1d1375c9ca1e"/>
+				<text><![CDATA[inventarios_aux_Valor]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="0b2237b0-eb9c-497a-bed3-42b92c2234be"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="79" height="15" uuid="39598d5a-cf52-496e-9f1e-8044f133cefa"/>
+				<textFieldExpression><![CDATA[$F{inventarios_aux_Id_aux}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="79" y="0" width="79" height="15" uuid="63097aa3-577c-49ac-b4f6-720e43742013"/>
+				<textFieldExpression><![CDATA[$F{inventarios_aux_Amecop}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="158" y="0" width="79" height="15" uuid="e2799a47-4dc0-4abc-b1a5-bfe23e240335"/>
+				<textFieldExpression><![CDATA[$F{inventarios_aux_Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="237" y="0" width="79" height="15" uuid="55049109-4ba2-4dcd-9a5a-48a5289870ea"/>
+				<textFieldExpression><![CDATA[$F{inventarios_aux_Existencias}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="316" y="0" width="79" height="15" uuid="83eeb9f3-27cb-4260-b091-8e4ec94a5313"/>
+				<textFieldExpression><![CDATA[$F{inventarios_aux_Ajustes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="395" y="0" width="79" height="15" uuid="914d8cd9-f848-4807-9372-d8ebc7373fcf"/>
+				<textFieldExpression><![CDATA[$F{inventarios_aux_Precio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="474" y="0" width="79" height="15" uuid="19e4fdbd-708c-454b-b59d-36eae983ec01"/>
+				<textFieldExpression><![CDATA[$F{inventarios_aux_Valor}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="229c0ffe-c5e6-44e2-b7ee-d69f7b0089db"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="34ae8ac2-519f-40a5-b945-5b9493048654"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="33d5225d-9c89-403b-bfb1-c0d0b0387155"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="59575183-146b-44b4-8a91-cc38acca282b"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

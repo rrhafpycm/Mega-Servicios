@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="781323ad-68f6-4d48-857a-e3fa2f975e6f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     procesos.`Id` AS procesos_Id,
+     procesos.`Proceso` AS procesos_Proceso,
+     procesos.`Nombre` AS procesos_Nombre,
+     procesos.`Tipo` AS procesos_Tipo,
+     procesos.`Url` AS procesos_Url,
+     procesos.`Local` AS procesos_Local
+FROM
+     `procesos` procesos]]>
+	</queryString>
+	<field name="procesos_Id" class="java.lang.Integer"/>
+	<field name="procesos_Proceso" class="java.lang.String"/>
+	<field name="procesos_Nombre" class="java.lang.String"/>
+	<field name="procesos_Tipo" class="java.lang.Integer"/>
+	<field name="procesos_Url" class="java.lang.String"/>
+	<field name="procesos_Local" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="1663d473-9b42-49a8-a60f-047685e34386"/>
+				<imageExpression><![CDATA["leaf_banner_green.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="287" height="33" uuid="8d077f67-3e2e-4292-9a29-ad38f24c7784"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Mega Servicios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="72" y="46" width="215" height="22" uuid="c39313d1-eef7-4f54-be62-b6aed6bac7a3"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Procesos]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="badc7813-4eca-4c11-a78f-f97497494280"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="92" height="15" uuid="a77b530e-4739-4efb-8273-77e7d2480715"/>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="92" y="19" width="92" height="15" uuid="52aea462-d3e8-454e-a332-05bb903328c5"/>
+				<text><![CDATA[Proceso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="184" y="19" width="92" height="15" uuid="5a7cc3c3-0a82-422f-ae4b-be139703e08b"/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="276" y="19" width="92" height="15" uuid="c5aafb28-cf28-4594-a25e-dff156e8c6c3"/>
+				<text><![CDATA[Tipo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="368" y="19" width="92" height="15" uuid="aba33d2e-0c7c-4089-a3fd-fbef3cc8a8e3"/>
+				<text><![CDATA[Url]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="460" y="19" width="92" height="15" uuid="902c8ef2-c9f3-47d9-a115-d9e91d97bfae"/>
+				<text><![CDATA[procesos_Local]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="2e86e5d5-1b47-409f-b054-440483a81829"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="92" height="15" uuid="9ae04698-5711-49d8-b7c7-299971e5c963"/>
+				<textFieldExpression><![CDATA[$F{procesos_Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="92" y="0" width="92" height="15" uuid="526976f4-7cea-41d2-8e23-d4009a52f4cd"/>
+				<textFieldExpression><![CDATA[$F{procesos_Proceso}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="184" y="0" width="92" height="15" uuid="89c42146-9bad-4174-be1f-e5022b075dcd"/>
+				<textFieldExpression><![CDATA[$F{procesos_Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="276" y="0" width="92" height="15" uuid="94612a57-8cf5-4425-b3dc-d55a131e034f"/>
+				<textFieldExpression><![CDATA[$F{procesos_Tipo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="368" y="0" width="92" height="15" uuid="031a9c71-799c-40cc-b051-5d882e56014b"/>
+				<textFieldExpression><![CDATA[$F{procesos_Url}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="460" y="0" width="92" height="15" uuid="9662d38d-5455-4e3c-979f-fb21275b7564"/>
+				<textFieldExpression><![CDATA[$F{procesos_Local}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="e74c20e2-41d1-480e-8965-f1196fc3db29"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="84810275-45ee-4d51-9e7d-4edbc26e929a"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="8b4324a2-c763-4945-b8b2-1069139bde61"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="d6ae36bc-797d-49b8-9dc3-8ad59bd59dc8"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="transpasos_aux" language="groovy" pageWidth="555" pageHeight="802" columnWidth="535" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="1a69afa3-62b5-4e0e-8784-be03e23af140">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     transpasos_aux.`Id_aux` AS transpasos_aux_Id_aux,
+     transpasos_aux.`Amecop` AS transpasos_aux_Amecop,
+     transpasos_aux.`Nombre` AS transpasos_aux_Nombre,
+     transpasos_aux.`Piezas` AS transpasos_aux_Piezas,
+     transpasos_aux.`Precio` AS transpasos_aux_Precio,
+     transpasos_aux.`Valor` AS transpasos_aux_Valor,
+     transpasos_aux.`Existencias` AS transpasos_aux_Existencias
+FROM
+     `transpasos_aux` transpasos_aux]]>
+	</queryString>
+	<field name="transpasos_aux_Id_aux" class="java.lang.Integer"/>
+	<field name="transpasos_aux_Amecop" class="java.lang.String"/>
+	<field name="transpasos_aux_Nombre" class="java.lang.String"/>
+	<field name="transpasos_aux_Piezas" class="java.lang.Integer"/>
+	<field name="transpasos_aux_Precio" class="java.lang.Double"/>
+	<field name="transpasos_aux_Valor" class="java.lang.Double"/>
+	<field name="transpasos_aux_Existencias" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="156fade9-cc71-4703-8ffc-4c85f4058070"/>
+				<imageExpression><![CDATA["leaf_banner_gray.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="6fecc4e7-2fc7-4987-842d-b41059e31172"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Leaf Gray Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="117" y="46" width="157" height="22" uuid="daf3dd2b-a425-4a49-a683-1a5f8095abc7"/>
+				<text><![CDATA[Leaf Gray SubTitle]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="92674a7a-cdde-4dde-9e17-774e4b08149e"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="79" height="15" uuid="2a23e9e4-16b7-4458-bb07-28360443a353"/>
+				<text><![CDATA[transpasos_aux_Id_aux]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="79" y="19" width="79" height="15" uuid="a144bb2b-5c25-44b5-9464-e10b387e70d1"/>
+				<text><![CDATA[transpasos_aux_Amecop]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="158" y="19" width="79" height="15" uuid="f705f135-f0b8-4270-a571-6082ec994aba"/>
+				<text><![CDATA[transpasos_aux_Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="237" y="19" width="79" height="15" uuid="2b426ff0-fef7-46b8-b18e-f1597e5e9b8c"/>
+				<text><![CDATA[transpasos_aux_Piezas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="316" y="19" width="79" height="15" uuid="1bc1bba9-60f4-4be2-a47d-fda82c6be756"/>
+				<text><![CDATA[transpasos_aux_Precio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="395" y="19" width="79" height="15" uuid="e078b998-17d2-4632-bb38-d8f9d08ba7fc"/>
+				<text><![CDATA[transpasos_aux_Valor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="474" y="19" width="79" height="15" uuid="d4951a05-617e-4405-a96e-9d8508c979da"/>
+				<text><![CDATA[transpasos_aux_Existencias]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="51c73c2d-3408-4273-b26b-88f8e351cdbb"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="79" height="15" uuid="b65a6368-c39a-4927-bdcd-6aeeaa99f6e8"/>
+				<textFieldExpression><![CDATA[$F{transpasos_aux_Id_aux}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="79" y="0" width="79" height="15" uuid="e3545859-3684-40f9-a469-94c369eae26d"/>
+				<textFieldExpression><![CDATA[$F{transpasos_aux_Amecop}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="158" y="0" width="79" height="15" uuid="e66bb725-3eb6-43a7-bbf3-3b18e2ee5739"/>
+				<textFieldExpression><![CDATA[$F{transpasos_aux_Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="237" y="0" width="79" height="15" uuid="d0954813-3ed5-47e4-b564-d2ec6c3d094a"/>
+				<textFieldExpression><![CDATA[$F{transpasos_aux_Piezas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="316" y="0" width="79" height="15" uuid="fc50a972-98ca-49e2-ad35-71c6d2aca836"/>
+				<textFieldExpression><![CDATA[$F{transpasos_aux_Precio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="395" y="0" width="79" height="15" uuid="121f64de-5682-4127-87ac-a91ef2e8b391"/>
+				<textFieldExpression><![CDATA[$F{transpasos_aux_Valor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="474" y="0" width="79" height="15" uuid="a0c7cfe2-5c8f-4721-9dd9-99a06361bb12"/>
+				<textFieldExpression><![CDATA[$F{transpasos_aux_Existencias}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="4febad8e-e9e1-4166-9b46-e7ccb95b9e59"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="fb808abe-3f50-40d7-8924-c73dbbf49827"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="28e8d467-5bd8-4a59-bb7d-6c8e0cef82d2"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="b4aeb072-89fe-45d5-bac2-71a2ae6959f2"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

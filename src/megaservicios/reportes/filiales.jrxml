@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0302fee5-0057-4afc-a77c-baec36651cd9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     filiales.`Id` AS filiales_Id,
+     filiales.`Filial` AS filiales_Filial,
+     filiales.`Nombre` AS filiales_Nombre,
+     filiales.`Calle` AS filiales_Calle,
+     filiales.`Colonia` AS filiales_Colonia,
+     filiales.`Poblacion` AS filiales_Poblacion,
+     filiales.`CP` AS filiales_CP,
+     filiales.`Telefono` AS filiales_Telefono,
+     filiales.`RFC` AS filiales_RFC,
+     filiales.`Reg_SSA` AS filiales_Reg_SSA,
+     filiales.`Encargado` AS filiales_Encargado,
+     filiales.`DNS_IP` AS filiales_DNS_IP
+FROM
+     `filiales` filiales]]>
+	</queryString>
+	<field name="filiales_Id" class="java.lang.Integer"/>
+	<field name="filiales_Filial" class="java.lang.String"/>
+	<field name="filiales_Nombre" class="java.lang.String"/>
+	<field name="filiales_Calle" class="java.lang.String"/>
+	<field name="filiales_Colonia" class="java.lang.String"/>
+	<field name="filiales_Poblacion" class="java.lang.String"/>
+	<field name="filiales_CP" class="java.lang.Integer"/>
+	<field name="filiales_Telefono" class="java.lang.Integer"/>
+	<field name="filiales_RFC" class="java.lang.String"/>
+	<field name="filiales_Reg_SSA" class="java.lang.String"/>
+	<field name="filiales_Encargado" class="java.lang.String"/>
+	<field name="filiales_DNS_IP" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="aea1a8fa-4038-43a0-a554-ef945213da70"/>
+				<imageExpression><![CDATA["leaf_banner_green.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="288" height="33" uuid="a38c2995-d77c-46fd-a6da-43e40a54cafe"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Mega Servicios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="72" y="46" width="216" height="22" uuid="378b01a3-0935-40b0-b0a0-5805bc400572"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Filiales]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="9870029f-4f26-4bcf-9556-ab60ff3b1600"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="46" height="15" uuid="31291345-85ae-47c2-826a-778013012db1"/>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="46" y="19" width="46" height="15" uuid="51b2ba2a-ee4c-43ba-96a5-26792062abc0"/>
+				<text><![CDATA[Filial]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="92" y="19" width="46" height="15" uuid="8ca0211c-ef91-402e-bf62-926d57efe2d6"/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="138" y="19" width="46" height="15" uuid="dd836830-5631-48fe-9626-e5021d10e064"/>
+				<text><![CDATA[Calle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="184" y="19" width="46" height="15" uuid="b5e31701-996d-4155-a514-9548c9d32414"/>
+				<text><![CDATA[Colonia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="230" y="19" width="46" height="15" uuid="e3a8c3f1-f59a-4b3c-a866-7ac7722b7ec0"/>
+				<text><![CDATA[Poblacion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="276" y="19" width="46" height="15" uuid="099bc330-716a-45e6-9be6-c0f620825430"/>
+				<text><![CDATA[CP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="322" y="19" width="46" height="15" uuid="2d62edc0-c73e-4075-8371-bc3a02c6e26c"/>
+				<text><![CDATA[Telefono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="368" y="19" width="46" height="15" uuid="53cd1e2a-a6d4-46f3-86d7-24fc0228d38f"/>
+				<text><![CDATA[RFC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="414" y="19" width="46" height="15" uuid="6e8abb20-803b-4aaf-8464-9ff69497303e"/>
+				<text><![CDATA[Reg_SSA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="460" y="19" width="46" height="15" uuid="dfe79943-7886-4924-a0ae-8066b784b625"/>
+				<text><![CDATA[Encargado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="506" y="19" width="46" height="15" uuid="07024e5b-898a-4400-b721-a66159e863e4"/>
+				<text><![CDATA[DNS_IP]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="d7a2952d-cb6d-40bc-87ac-0301e4743c3f"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="46" height="15" uuid="076d1fed-a892-406b-a506-6f4611752c2c"/>
+				<textFieldExpression><![CDATA[$F{filiales_Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="46" y="0" width="46" height="15" uuid="4c6043db-9040-4cd9-967a-75235c04566e"/>
+				<textFieldExpression><![CDATA[$F{filiales_Filial}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="92" y="0" width="46" height="15" uuid="b0f89040-9882-45f0-bfcc-6e6dfce97743"/>
+				<textFieldExpression><![CDATA[$F{filiales_Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="138" y="0" width="46" height="15" uuid="ba8918db-a202-4350-9587-3c5ec64ae62b"/>
+				<textFieldExpression><![CDATA[$F{filiales_Calle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="184" y="0" width="46" height="15" uuid="4adb0f51-be44-457f-9c4a-04af1de1cba2"/>
+				<textFieldExpression><![CDATA[$F{filiales_Colonia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="230" y="0" width="46" height="15" uuid="c658ad1a-14e2-4168-a337-076ec4d6ab5d"/>
+				<textFieldExpression><![CDATA[$F{filiales_Poblacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="276" y="0" width="46" height="15" uuid="b8e6a8e8-9581-4658-99f2-ff0ddbbfdf3a"/>
+				<textFieldExpression><![CDATA[$F{filiales_CP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="322" y="0" width="46" height="15" uuid="be85e8cc-4009-40b6-833c-66c35daec216"/>
+				<textFieldExpression><![CDATA[$F{filiales_Telefono}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="368" y="0" width="46" height="15" uuid="e0516173-bb28-4f60-950f-a7b29c0cfca1"/>
+				<textFieldExpression><![CDATA[$F{filiales_RFC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="414" y="0" width="46" height="15" uuid="a7d85827-ecc3-4029-94fd-014fda4878ce"/>
+				<textFieldExpression><![CDATA[$F{filiales_Reg_SSA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="460" y="0" width="46" height="15" uuid="b301b2ec-b7ed-4bc2-9270-ddc6b06dd093"/>
+				<textFieldExpression><![CDATA[$F{filiales_Encargado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="506" y="0" width="46" height="15" uuid="799abb37-72dc-4ac6-b601-4698bc8cc6e7"/>
+				<textFieldExpression><![CDATA[$F{filiales_DNS_IP}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="d63f44fc-938c-4934-a090-7cdb20fb23af"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="74de99cc-f5d0-4e4b-81b8-b0beac43cda3"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="064a0173-5645-48e9-91e9-cf1ceb8b5839"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="21d8f670-8658-4ce8-976f-31bc9e642113"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

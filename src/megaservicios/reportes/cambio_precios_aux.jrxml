@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cambio_precios_aux" language="groovy" pageWidth="555" pageHeight="802" columnWidth="535" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="9c9fb510-c9f6-4e9a-bb1b-e15ca535030a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     cambio_precios_aux.`Id_aux` AS cambio_precios_aux_Id_aux,
+     cambio_precios_aux.`Fecha` AS cambio_precios_aux_Fecha,
+     cambio_precios_aux.`Amecop` AS cambio_precios_aux_Amecop,
+     cambio_precios_aux.`Nombre` AS cambio_precios_aux_Nombre,
+     cambio_precios_aux.`Publico` AS cambio_precios_aux_Publico,
+     cambio_precios_aux.`Costo` AS cambio_precios_aux_Costo,
+     cambio_precios_aux.`mar` AS cambio_precios_aux_mar,
+     cambio_precios_aux.`antpublico` AS cambio_precios_aux_antpublico,
+     cambio_precios_aux.`antcosto` AS cambio_precios_aux_antcosto,
+     cambio_precios_aux.`antmar` AS cambio_precios_aux_antmar
+FROM
+     `cambio_precios_aux` cambio_precios_aux]]>
+	</queryString>
+	<field name="cambio_precios_aux_Id_aux" class="java.lang.Integer"/>
+	<field name="cambio_precios_aux_Fecha" class="java.sql.Date"/>
+	<field name="cambio_precios_aux_Amecop" class="java.lang.String"/>
+	<field name="cambio_precios_aux_Nombre" class="java.lang.String"/>
+	<field name="cambio_precios_aux_Publico" class="java.lang.String"/>
+	<field name="cambio_precios_aux_Costo" class="java.lang.Double"/>
+	<field name="cambio_precios_aux_mar" class="java.lang.Double"/>
+	<field name="cambio_precios_aux_antpublico" class="java.lang.Double"/>
+	<field name="cambio_precios_aux_antcosto" class="java.lang.Double"/>
+	<field name="cambio_precios_aux_antmar" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="f66e1907-9321-4142-9b2f-078cd51b3f50"/>
+				<imageExpression><![CDATA["leaf_banner_gray.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="c6e48c09-4f42-4dcc-8c91-4ac6979effdb"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Leaf Gray Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="117" y="46" width="157" height="22" uuid="07d6abd5-682b-48dd-90c1-e5722eea2c6b"/>
+				<text><![CDATA[Leaf Gray SubTitle]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="6dc73b92-6acc-4864-b230-433d811cea10"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="55" height="15" uuid="587e71ce-0a91-43df-93e3-cdc5b893e6f8"/>
+				<text><![CDATA[cambio_precios_aux_Id_aux]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="55" y="19" width="55" height="15" uuid="efeb6d1e-6d3a-4f68-9252-68f9231ffc1c"/>
+				<text><![CDATA[cambio_precios_aux_Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="110" y="19" width="55" height="15" uuid="8683efd4-f92b-46f0-b648-2dbfdebdf7b4"/>
+				<text><![CDATA[cambio_precios_aux_Amecop]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="165" y="19" width="55" height="15" uuid="790f3671-696f-4106-8042-dbebdf1a3ba9"/>
+				<text><![CDATA[cambio_precios_aux_Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="220" y="19" width="55" height="15" uuid="ab93e5fc-40d0-433f-969a-5789890bc298"/>
+				<text><![CDATA[cambio_precios_aux_Publico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="275" y="19" width="55" height="15" uuid="3a9cee90-5b53-4508-95db-c81fee9a3902"/>
+				<text><![CDATA[cambio_precios_aux_Costo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="330" y="19" width="55" height="15" uuid="70203e3c-e8f4-4b2a-b1c9-7f3a74798eea"/>
+				<text><![CDATA[cambio_precios_aux_mar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="385" y="19" width="55" height="15" uuid="dffe295c-f526-4f23-a1c2-f73dc174e125"/>
+				<text><![CDATA[cambio_precios_aux_antpublico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="440" y="19" width="55" height="15" uuid="2d18011c-f4ae-4ddc-9f9f-1cac3821143a"/>
+				<text><![CDATA[cambio_precios_aux_antcosto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="495" y="19" width="55" height="15" uuid="3a56c280-f9e2-4c12-9543-7b414aefab44"/>
+				<text><![CDATA[cambio_precios_aux_antmar]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="24519699-528d-43c1-aa19-e0caf3bf1837"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="55" height="15" uuid="901fc4b2-e346-46fe-8047-5507f32d18e3"/>
+				<textFieldExpression><![CDATA[$F{cambio_precios_aux_Id_aux}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="55" y="0" width="55" height="15" uuid="f5c31952-c2af-4197-834f-2bfaf0668c86"/>
+				<textFieldExpression><![CDATA[$F{cambio_precios_aux_Fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="110" y="0" width="55" height="15" uuid="f93be672-5bea-4d45-8347-e18b14c8b2f8"/>
+				<textFieldExpression><![CDATA[$F{cambio_precios_aux_Amecop}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="165" y="0" width="55" height="15" uuid="1b6f2c4e-0bda-4aff-b862-35aecb59fb98"/>
+				<textFieldExpression><![CDATA[$F{cambio_precios_aux_Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="220" y="0" width="55" height="15" uuid="c67c594d-d542-4fc7-a2a1-6557927913cf"/>
+				<textFieldExpression><![CDATA[$F{cambio_precios_aux_Publico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="275" y="0" width="55" height="15" uuid="b6c423da-4af5-4330-8496-86c9d7b29df1"/>
+				<textFieldExpression><![CDATA[$F{cambio_precios_aux_Costo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="330" y="0" width="55" height="15" uuid="fdf9b37f-a635-428a-b7fd-6fba9a17ba59"/>
+				<textFieldExpression><![CDATA[$F{cambio_precios_aux_mar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="385" y="0" width="55" height="15" uuid="952c61a6-2bac-4bdd-8509-b6ce2618f365"/>
+				<textFieldExpression><![CDATA[$F{cambio_precios_aux_antpublico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="440" y="0" width="55" height="15" uuid="5b507d57-b6a7-42d2-b8c8-e77c865c62aa"/>
+				<textFieldExpression><![CDATA[$F{cambio_precios_aux_antcosto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="495" y="0" width="55" height="15" uuid="2c585070-0ebc-4d3f-a2b9-7f9b88b0f6c0"/>
+				<textFieldExpression><![CDATA[$F{cambio_precios_aux_antmar}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="468799ca-cbd3-410e-9778-9262d1972213"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="3b1f3ded-2c53-4924-bed4-ceb5b46abd0f"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="1f3f54d1-8640-4f14-92a6-5f197bbfac70"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="c1caa14e-95a3-44cf-9c67-e6cd64ae3107"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

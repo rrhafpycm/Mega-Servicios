@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f75e1453-31e8-434c-a0ee-b879b301a70a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="4"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     catalogo_medicamentos.`Fecha` AS catalogo_medicamentos_Fecha,
+     catalogo_medicamentos.`Codigo` AS catalogo_medicamentos_Codigo,
+     catalogo_medicamentos.`Nombre` AS catalogo_medicamentos_Nombre,
+     catalogo_medicamentos.`Compra` AS catalogo_medicamentos_Compra,
+     catalogo_medicamentos.`Venta` AS catalogo_medicamentos_Venta,
+     catalogo_medicamentos.`Iva` AS catalogo_medicamentos_Iva,
+     catalogo_medicamentos.`D1` AS catalogo_medicamentos_D1,
+     catalogo_medicamentos.`D2` AS catalogo_medicamentos_D2,
+     catalogo_medicamentos.`Laboratorio` AS catalogo_medicamentos_Laboratorio,
+     catalogo_medicamentos.`Descripcion` AS catalogo_medicamentos_Descripcion,
+     catalogo_medicamentos.`Amecop` AS catalogo_medicamentos_Amecop,
+     catalogo_medicamentos.`Estante` AS catalogo_medicamentos_Estante,
+     catalogo_medicamentos.`Localizacion` AS catalogo_medicamentos_Localizacion,
+     catalogo_medicamentos.`Id` AS catalogo_medicamentos_Id
+FROM
+     `catalogo_medicamentos` catalogo_medicamentos]]>
+	</queryString>
+	<field name="catalogo_medicamentos_Fecha" class="java.lang.Integer"/>
+	<field name="catalogo_medicamentos_Codigo" class="java.lang.Integer"/>
+	<field name="catalogo_medicamentos_Nombre" class="java.lang.String"/>
+	<field name="catalogo_medicamentos_Compra" class="java.lang.Double"/>
+	<field name="catalogo_medicamentos_Venta" class="java.lang.Double"/>
+	<field name="catalogo_medicamentos_Iva" class="java.lang.Integer"/>
+	<field name="catalogo_medicamentos_D1" class="java.lang.Integer"/>
+	<field name="catalogo_medicamentos_D2" class="java.lang.Integer"/>
+	<field name="catalogo_medicamentos_Laboratorio" class="java.lang.String"/>
+	<field name="catalogo_medicamentos_Descripcion" class="java.lang.String"/>
+	<field name="catalogo_medicamentos_Amecop" class="java.lang.String"/>
+	<field name="catalogo_medicamentos_Estante" class="java.lang.String"/>
+	<field name="catalogo_medicamentos_Localizacion" class="java.lang.String"/>
+	<field name="catalogo_medicamentos_Id" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="104ff238-1226-4d42-9d83-5cd5695f5f12"/>
+				<imageExpression><![CDATA["leaf_banner_green.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="289" height="33" uuid="de64b804-64e7-43e1-84d0-7f3bcdb40713"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Mega Servicios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="72" y="46" width="217" height="22" uuid="664b7054-c350-46d5-8893-201bfda6b870"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Catalogo de Medicamentos]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="62699990-6a1f-4ed7-81d1-3fcc18f533f6"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="39" height="15" uuid="6576cee9-f23e-4e19-bcab-b501d05a1fbc"/>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="39" y="19" width="39" height="15" uuid="ebbd222c-fcbc-432f-89bb-66bea02ec722"/>
+				<text><![CDATA[Codigo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="78" y="19" width="39" height="15" uuid="bc54518b-b5e0-405d-8103-84573f5e54b7"/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="117" y="19" width="39" height="15" uuid="48b8f377-1572-4ce6-92dd-cde99f7b3d23"/>
+				<text><![CDATA[Compra]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="156" y="19" width="39" height="15" uuid="6a82470a-d450-4eab-870e-d16fd848359e"/>
+				<text><![CDATA[Venta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="195" y="19" width="39" height="15" uuid="4aa5d69c-1b60-4058-b1b9-78a572f2fa29"/>
+				<text><![CDATA[Iva]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="234" y="19" width="39" height="15" uuid="405ac385-deaa-4c6c-ae66-e82ccbf9304c"/>
+				<text><![CDATA[D1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="273" y="19" width="39" height="15" uuid="58b1129e-eb8b-49a0-ae25-f74f0cd4ce6f"/>
+				<text><![CDATA[D2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="312" y="19" width="39" height="15" uuid="33fe38ee-b8e1-43f0-a091-e04c6ecae7ff"/>
+				<text><![CDATA[Laboratorio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="351" y="19" width="39" height="15" uuid="9b5acb05-4544-4d7a-94a0-31bdd030ed56"/>
+				<text><![CDATA[Descripcion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="390" y="19" width="39" height="15" uuid="73032d9f-8a33-421e-b2de-c9eb58442ced"/>
+				<text><![CDATA[Amecop]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="429" y="19" width="39" height="15" uuid="b2d87be2-058c-4972-b768-e5c9b5f481b4"/>
+				<text><![CDATA[Estante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="468" y="19" width="39" height="15" uuid="0356cfc4-f48d-4908-a66e-ca83e1531cdf"/>
+				<text><![CDATA[Localizacion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="507" y="19" width="39" height="15" uuid="033bf6f9-2d62-4a3e-b963-b48278826d88"/>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="7cf8b61c-8419-4697-8d3d-631f17dd3548"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="39" height="15" uuid="a80e4843-6247-4afd-80f5-2871ad7509af"/>
+				<textFieldExpression><![CDATA[$F{catalogo_medicamentos_Fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="39" y="0" width="39" height="15" uuid="d91ffb4b-dd6c-4e6e-98e5-4dc623315c54"/>
+				<textFieldExpression><![CDATA[$F{catalogo_medicamentos_Codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="78" y="0" width="39" height="15" uuid="49e6df67-5393-4936-bdab-c6f7c23961ec"/>
+				<textFieldExpression><![CDATA[$F{catalogo_medicamentos_Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="117" y="0" width="39" height="15" uuid="713ca875-75f7-4184-9fe3-1c96faacc18e"/>
+				<textFieldExpression><![CDATA[$F{catalogo_medicamentos_Compra}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="156" y="0" width="39" height="15" uuid="f1da8107-c2a9-4c5d-8c60-b5ca11121054"/>
+				<textFieldExpression><![CDATA[$F{catalogo_medicamentos_Venta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="195" y="0" width="39" height="15" uuid="e6f9f0a9-8394-4de3-8e68-8d52013dde14"/>
+				<textFieldExpression><![CDATA[$F{catalogo_medicamentos_Iva}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="234" y="0" width="39" height="15" uuid="15aa6f18-ebc9-45ba-8400-2ef0cfc78e44"/>
+				<textFieldExpression><![CDATA[$F{catalogo_medicamentos_D1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="273" y="0" width="39" height="15" uuid="0ad989ad-405b-4263-8174-4fc67e3eda50"/>
+				<textFieldExpression><![CDATA[$F{catalogo_medicamentos_D2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="312" y="0" width="39" height="15" uuid="fae4478c-d11a-48cd-980f-9e0bf7f1f7a2"/>
+				<textFieldExpression><![CDATA[$F{catalogo_medicamentos_Laboratorio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="351" y="0" width="39" height="15" uuid="408974f2-b5db-479e-b3dc-58f69a4d02d8"/>
+				<textFieldExpression><![CDATA[$F{catalogo_medicamentos_Descripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="390" y="0" width="39" height="15" uuid="e84dd38b-f50a-469d-941d-3a25c7cb579b"/>
+				<textFieldExpression><![CDATA[$F{catalogo_medicamentos_Amecop}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="429" y="0" width="39" height="15" uuid="da5c40f6-aacf-4a7c-b591-0def0026d3ba"/>
+				<textFieldExpression><![CDATA[$F{catalogo_medicamentos_Estante}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="468" y="0" width="39" height="15" uuid="6dba9bea-69f7-4a24-bf80-014f26ea8650"/>
+				<textFieldExpression><![CDATA[$F{catalogo_medicamentos_Localizacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="507" y="0" width="39" height="15" uuid="bd9d0912-04c4-4996-983c-73997c3a9485"/>
+				<textFieldExpression><![CDATA[$F{catalogo_medicamentos_Id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="5941fb1e-74ed-4456-b5f5-abedf0f53f2b"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="16e29a29-18ff-4aa4-9bb0-2186a6d87236"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="67957b60-854e-4488-b4c6-2a879f96744a"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="feb699e1-1a92-4f10-ac5e-99add34e9443"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

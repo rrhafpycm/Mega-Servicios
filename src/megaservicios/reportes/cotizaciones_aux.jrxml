@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cotizaciones_aux" language="groovy" pageWidth="555" pageHeight="802" columnWidth="535" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c3fc4eec-738e-4c6c-b4ab-5271b47b1d67">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     cotizaciones_aux.`Id_aux` AS cotizaciones_aux_Id_aux,
+     cotizaciones_aux.`Amecop` AS cotizaciones_aux_Amecop,
+     cotizaciones_aux.`Nombre` AS cotizaciones_aux_Nombre,
+     cotizaciones_aux.`Piezas` AS cotizaciones_aux_Piezas,
+     cotizaciones_aux.`Precio` AS cotizaciones_aux_Precio,
+     cotizaciones_aux.`Importe` AS cotizaciones_aux_Importe,
+     cotizaciones_aux.`Iva` AS cotizaciones_aux_Iva,
+     cotizaciones_aux.`Descuento` AS cotizaciones_aux_Descuento,
+     cotizaciones_aux.`Total` AS cotizaciones_aux_Total
+FROM
+     `cotizaciones_aux` cotizaciones_aux]]>
+	</queryString>
+	<field name="cotizaciones_aux_Id_aux" class="java.lang.Integer"/>
+	<field name="cotizaciones_aux_Amecop" class="java.lang.String"/>
+	<field name="cotizaciones_aux_Nombre" class="java.lang.String"/>
+	<field name="cotizaciones_aux_Piezas" class="java.lang.Integer"/>
+	<field name="cotizaciones_aux_Precio" class="java.lang.Double"/>
+	<field name="cotizaciones_aux_Importe" class="java.lang.Double"/>
+	<field name="cotizaciones_aux_Iva" class="java.lang.Double"/>
+	<field name="cotizaciones_aux_Descuento" class="java.lang.Double"/>
+	<field name="cotizaciones_aux_Total" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="6b4eac03-2da2-448a-9d7c-eb5732125df1"/>
+				<imageExpression><![CDATA["leaf_banner_gray.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="2d5c3a48-abf6-4af6-9b00-85620aceae5a"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Leaf Gray Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="117" y="46" width="157" height="22" uuid="6c7cb4dc-5b85-4a36-bc0c-8eb07d403bf0"/>
+				<text><![CDATA[Leaf Gray SubTitle]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="c2f54f84-cfda-4fb4-8961-97bb33d6332a"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="61" height="15" uuid="99d18991-0df8-494d-be88-38afd2284d8e"/>
+				<text><![CDATA[cotizaciones_aux_Id_aux]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="61" y="19" width="61" height="15" uuid="607ab70e-909c-421e-825d-321f8904a9df"/>
+				<text><![CDATA[cotizaciones_aux_Amecop]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="122" y="19" width="61" height="15" uuid="daf91912-e0fb-45e0-a9d5-0fa3afba24c0"/>
+				<text><![CDATA[cotizaciones_aux_Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="183" y="19" width="61" height="15" uuid="20c92f53-0010-4f77-b2d8-f212ea9cc5bc"/>
+				<text><![CDATA[cotizaciones_aux_Piezas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="244" y="19" width="61" height="15" uuid="7c346ca3-b392-4b4b-aabb-72a645dc5399"/>
+				<text><![CDATA[cotizaciones_aux_Precio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="305" y="19" width="61" height="15" uuid="102e1896-5db0-4a86-946e-e649f130373e"/>
+				<text><![CDATA[cotizaciones_aux_Importe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="366" y="19" width="61" height="15" uuid="da44bae1-3ce2-4357-9397-6b0e91e361df"/>
+				<text><![CDATA[cotizaciones_aux_Iva]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="427" y="19" width="61" height="15" uuid="ed22eef9-7efe-4ca9-b755-309b3c9e9f50"/>
+				<text><![CDATA[cotizaciones_aux_Descuento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="488" y="19" width="61" height="15" uuid="fa3951df-e3ec-47ea-9fb8-f60e12c25bc5"/>
+				<text><![CDATA[cotizaciones_aux_Total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="cc49100a-9df0-4b38-91bd-95261e74dfcd"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="61" height="15" uuid="f6fe0555-3295-48e5-a60a-8a3e890abfc2"/>
+				<textFieldExpression><![CDATA[$F{cotizaciones_aux_Id_aux}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="61" y="0" width="61" height="15" uuid="aae8ea13-0420-4687-b283-37547b7915fb"/>
+				<textFieldExpression><![CDATA[$F{cotizaciones_aux_Amecop}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="122" y="0" width="61" height="15" uuid="e7209851-a3bb-4918-8a1b-142aedec23b0"/>
+				<textFieldExpression><![CDATA[$F{cotizaciones_aux_Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="183" y="0" width="61" height="15" uuid="46cbe311-1d7b-4aa4-8aa6-1ecd9594e3e6"/>
+				<textFieldExpression><![CDATA[$F{cotizaciones_aux_Piezas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="244" y="0" width="61" height="15" uuid="f1657cb1-12f4-4564-9d35-5854be628af9"/>
+				<textFieldExpression><![CDATA[$F{cotizaciones_aux_Precio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="305" y="0" width="61" height="15" uuid="25d8fcac-2383-4a88-9aaa-4f5de203a416"/>
+				<textFieldExpression><![CDATA[$F{cotizaciones_aux_Importe}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="366" y="0" width="61" height="15" uuid="95c1e66e-7932-46ab-ba64-8940eccd37ea"/>
+				<textFieldExpression><![CDATA[$F{cotizaciones_aux_Iva}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="427" y="0" width="61" height="15" uuid="056dc582-e8db-463a-9339-e31b1edfbac3"/>
+				<textFieldExpression><![CDATA[$F{cotizaciones_aux_Descuento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="488" y="0" width="61" height="15" uuid="d2f14234-d847-404d-9436-4e40f486fa33"/>
+				<textFieldExpression><![CDATA[$F{cotizaciones_aux_Total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="6089ad85-2e5f-46c0-9df8-a6776f7da976"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="dca01d31-9519-490e-90b2-2265fd91179e"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="e1331b02-6ee0-457a-ada7-4c8cab077f0b"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="5026ef1e-0e4c-475f-8724-6fd25192a532"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f9106d54-0ede-4860-8803-3f0949e532c9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\Cañita\\Documents\\NetBeansProjects\\MegaServicios\\src\\megaservicios\\reportes\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     cambio_precios.`Id` AS cambio_precios_Id,
+     cambio_precios.`Fecha` AS cambio_precios_Fecha,
+     cambio_precios.`Estado` AS cambio_precios_Estado,
+     cambio_precios.`Empleado` AS cambio_precios_Empleado,
+     cambio_precios.`Suma` AS cambio_precios_Suma
+FROM
+     `cambio_precios` cambio_precios]]>
+	</queryString>
+	<field name="cambio_precios_Id" class="java.lang.Integer"/>
+	<field name="cambio_precios_Fecha" class="java.sql.Date"/>
+	<field name="cambio_precios_Estado" class="java.lang.String"/>
+	<field name="cambio_precios_Empleado" class="java.lang.String"/>
+	<field name="cambio_precios_Suma" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="c3f4d46d-8689-4f7b-a4d9-db24ee2bb4fb"/>
+				<imageExpression><![CDATA["leaf_banner_green.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="289" height="33" uuid="1049d9c5-4dea-4133-9b11-3400a8f285a6"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Mega Servicios ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="74" y="46" width="215" height="22" uuid="e8b7a996-a024-4f41-964a-945c9336add0"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Cambio de precios]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="a8bd5ca4-9220-4a29-b2e2-1c68679ae8cc"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="58" height="15" uuid="9962f6f2-92a9-414e-980d-45eaf096f948"/>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="58" y="19" width="91" height="15" uuid="5601ddc9-c50a-4bfe-85f1-af59946a0bb4"/>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="149" y="19" width="102" height="15" uuid="2220be30-d9ae-45e7-b37b-8cafbecb6965"/>
+				<text><![CDATA[Estado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="251" y="19" width="158" height="15" uuid="fdac3405-c99e-4ade-a4b1-4ca58c7cc153"/>
+				<text><![CDATA[Empleado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="409" y="19" width="146" height="15" uuid="d6496ef5-0cee-4dd1-85c0-82680fc1c704"/>
+				<text><![CDATA[Suma]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="ee6ae6bc-27de-48d5-968a-6dd4cc9bcdfc"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="58" height="15" uuid="fe569456-30bf-4f9f-a364-4f49e9948921"/>
+				<textFieldExpression><![CDATA[$F{cambio_precios_Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="58" y="0" width="91" height="15" uuid="f3922745-578d-4025-939d-44b36c830a74"/>
+				<textFieldExpression><![CDATA[$F{cambio_precios_Fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="149" y="0" width="102" height="15" uuid="3fb65365-dd21-4884-98e6-cfe56f13820c"/>
+				<textFieldExpression><![CDATA[$F{cambio_precios_Estado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="251" y="0" width="158" height="15" uuid="0e35a7e3-6e65-41dd-b74f-0ff2b5116d2b"/>
+				<textFieldExpression><![CDATA[$F{cambio_precios_Empleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="409" y="0" width="146" height="15" uuid="674ab0d6-ce25-4c93-a943-0399c73a39b8"/>
+				<textFieldExpression><![CDATA[$F{cambio_precios_Suma}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="4cf7365e-8527-411d-b8fe-4a1593561cee"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<subreport>
+				<reportElement x="3" y="3" width="550" height="40" uuid="ca23dc53-52ec-4539-88ac-2d84218b8428"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "cambio_precios_aux.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="59a9b268-bf4b-4e28-ac7e-fd7f76f7e53d"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="b679e698-5039-4331-9a5e-c807bc717ccb"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="76c17955-1f94-4576-86cb-9cd36c74ec12"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

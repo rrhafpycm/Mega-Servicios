@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cfcf01d4-9c0a-4800-87cb-dfed9a862891">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     articulos.`Id` AS articulos_Id,
+     articulos.`Amecop` AS articulos_Amecop,
+     articulos.`Cambia` AS articulos_Cambia,
+     articulos.`Nombre` AS articulos_Nombre,
+     articulos.`Sector` AS articulos_Sector,
+     articulos.`Local` AS articulos_Local,
+     articulos.`Laboratorio` AS articulos_Laboratorio,
+     articulos.`Descuentos` AS articulos_Descuentos,
+     articulos.`Caducidad` AS articulos_Caducidad,
+     articulos.`Refrigerado` AS articulos_Refrigerado,
+     articulos.`Cambio_Precio` AS articulos_Cambio_Precio,
+     articulos.`Iva` AS articulos_Iva,
+     articulos.`Leps` AS articulos_Leps,
+     articulos.`Buscar` AS articulos_Buscar,
+     articulos.`Precio_Publico` AS articulos_Precio_Publico,
+     articulos.`Precio_Costo` AS articulos_Precio_Costo,
+     articulos.`Margen_Utilidad` AS articulos_Margen_Utilidad,
+     articulos.`Descuento` AS articulos_Descuento,
+     articulos.`Comision` AS articulos_Comision,
+     articulos.`Maximo` AS articulos_Maximo,
+     articulos.`Minimo` AS articulos_Minimo,
+     articulos.`Dias_Inventario` AS articulos_Dias_Inventario,
+     articulos.`Anabolico` AS articulos_Anabolico
+FROM
+     `articulos` articulos]]>
+	</queryString>
+	<field name="articulos_Id" class="java.lang.Integer"/>
+	<field name="articulos_Amecop" class="java.lang.String"/>
+	<field name="articulos_Cambia" class="java.lang.String"/>
+	<field name="articulos_Nombre" class="java.lang.String"/>
+	<field name="articulos_Sector" class="java.lang.Integer"/>
+	<field name="articulos_Local" class="java.lang.String"/>
+	<field name="articulos_Laboratorio" class="java.lang.String"/>
+	<field name="articulos_Descuentos" class="java.lang.Integer"/>
+	<field name="articulos_Caducidad" class="java.lang.Integer"/>
+	<field name="articulos_Refrigerado" class="java.lang.Integer"/>
+	<field name="articulos_Cambio_Precio" class="java.lang.Integer"/>
+	<field name="articulos_Iva" class="java.lang.Double"/>
+	<field name="articulos_Leps" class="java.lang.String"/>
+	<field name="articulos_Buscar" class="java.lang.String"/>
+	<field name="articulos_Precio_Publico" class="java.lang.Double"/>
+	<field name="articulos_Precio_Costo" class="java.lang.Double"/>
+	<field name="articulos_Margen_Utilidad" class="java.lang.Double"/>
+	<field name="articulos_Descuento" class="java.lang.Double"/>
+	<field name="articulos_Comision" class="java.lang.Double"/>
+	<field name="articulos_Maximo" class="java.lang.Double"/>
+	<field name="articulos_Minimo" class="java.lang.Double"/>
+	<field name="articulos_Dias_Inventario" class="java.lang.Integer"/>
+	<field name="articulos_Anabolico" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="c5c2e302-4550-48fc-83a6-01c0dee97ed3"/>
+				<imageExpression><![CDATA["leaf_banner_green.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="288" height="33" uuid="1b4fbd31-6382-48f0-be43-63d065e19f16"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Mega Servicios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="72" y="46" width="216" height="22" uuid="fbef695f-224f-4664-b7e2-351e6d9a61e4"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Articulos]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="33e509b9-b337-46d8-8205-ed68bf8bfa64"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="24" height="15" uuid="d32a76a0-2606-4a36-a953-72ca753d014a"/>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="24" y="19" width="24" height="15" uuid="051e51ae-0223-478f-be3d-109352a88093"/>
+				<text><![CDATA[Amecop]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="48" y="19" width="24" height="15" uuid="c607d676-9a6a-4311-8118-bd8311e0190a"/>
+				<text><![CDATA[Cambia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="72" y="19" width="24" height="15" uuid="1ef0f97f-80da-4523-b6d8-cc27fc42e802"/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="96" y="19" width="24" height="15" uuid="e252a5b0-2131-4fe5-b8ee-27a8730c0efc"/>
+				<text><![CDATA[Sector]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="120" y="19" width="24" height="15" uuid="50c2da38-382f-4348-b254-66729cb6391b"/>
+				<text><![CDATA[Local]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="144" y="19" width="24" height="15" uuid="8450b5c2-f1bf-48db-bd55-974779e10fdb"/>
+				<text><![CDATA[Laboratorio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="168" y="19" width="24" height="15" uuid="827acdfa-9daa-4df6-9fed-a280088afc9e"/>
+				<text><![CDATA[Descuentos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="192" y="19" width="24" height="15" uuid="22edf1a5-9199-4380-97da-232f8da06f2f"/>
+				<text><![CDATA[Caducidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="216" y="19" width="24" height="15" uuid="d78898b8-9165-4105-b7c5-721ca621b63e"/>
+				<text><![CDATA[Refrigerado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="240" y="19" width="24" height="15" uuid="d2a1c637-7c81-441a-a5af-31c0fde913a7"/>
+				<text><![CDATA[Cambio_Precio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="264" y="19" width="24" height="15" uuid="5ef36706-8a34-435f-895f-dca9a588897a"/>
+				<text><![CDATA[Iva]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="288" y="19" width="24" height="15" uuid="3c8a1181-7e15-4d29-8a8a-abc32c67c59c"/>
+				<text><![CDATA[Leps]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="312" y="19" width="24" height="15" uuid="554c8ace-98f3-4edc-a6c7-af361f464cb1"/>
+				<text><![CDATA[Buscar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="336" y="19" width="24" height="15" uuid="3f37c815-c191-481e-a5f2-0239a1435b08"/>
+				<text><![CDATA[Precio_Publico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="360" y="19" width="24" height="15" uuid="062fdd94-d48d-4471-b914-75d8e60d63c2"/>
+				<text><![CDATA[Precio_Costo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="384" y="19" width="24" height="15" uuid="8f878a3e-ccdb-48b1-9eba-84ac49e65d2e"/>
+				<text><![CDATA[Margen_Utilidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="408" y="19" width="24" height="15" uuid="c68c0a96-1e3f-4d3e-8e03-238be60f11bf"/>
+				<text><![CDATA[Descuento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="432" y="19" width="24" height="15" uuid="9fe6afde-43db-46d8-91dd-e775a9bbc746"/>
+				<text><![CDATA[Comision]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="456" y="19" width="24" height="15" uuid="34615e80-2c73-494c-9a75-67ea2ba6d205"/>
+				<text><![CDATA[Maximo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="480" y="19" width="24" height="15" uuid="1a6a5a6d-43bf-4c62-befd-bb6406253fd7"/>
+				<text><![CDATA[Minimo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="504" y="19" width="24" height="15" uuid="a2f465ea-f035-4a4e-991d-54739b3b1f5b"/>
+				<text><![CDATA[Dias_Inventario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="528" y="19" width="24" height="15" uuid="f9771692-2cbe-4636-88ff-504adfdd1a0a"/>
+				<text><![CDATA[Anabolico]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="c0c9441c-b36f-470e-899e-9c17eff2933d"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="24" height="15" uuid="5a5c2b80-68a3-4607-adb9-236617307226"/>
+				<textFieldExpression><![CDATA[$F{articulos_Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="24" y="0" width="24" height="15" uuid="9339f772-c4fe-4f2d-ae5e-14c204f6725b"/>
+				<textFieldExpression><![CDATA[$F{articulos_Amecop}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="48" y="0" width="24" height="15" uuid="6aedf8cd-6925-4e9d-a2a0-9f60ae431e00"/>
+				<textFieldExpression><![CDATA[$F{articulos_Cambia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="72" y="0" width="24" height="15" uuid="0d82acd1-8c64-4889-a5d6-c57ba761e2d6"/>
+				<textFieldExpression><![CDATA[$F{articulos_Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="96" y="0" width="24" height="15" uuid="4241e609-8d30-4b46-a25b-c2777adcc96d"/>
+				<textFieldExpression><![CDATA[$F{articulos_Sector}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="120" y="0" width="24" height="15" uuid="b57ac7dc-91a2-4b4c-af67-8197f0c718fe"/>
+				<textFieldExpression><![CDATA[$F{articulos_Local}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="144" y="0" width="24" height="15" uuid="6f0b3f84-079f-4121-9a84-dfeb691ebe38"/>
+				<textFieldExpression><![CDATA[$F{articulos_Laboratorio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="168" y="0" width="24" height="15" uuid="45b0cb86-9e81-45dc-b8c5-f3cff3701bc4"/>
+				<textFieldExpression><![CDATA[$F{articulos_Descuentos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="192" y="0" width="24" height="15" uuid="307ac0e7-87b9-4852-af1e-6911442b487a"/>
+				<textFieldExpression><![CDATA[$F{articulos_Caducidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="216" y="0" width="24" height="15" uuid="7382db5d-637a-4057-90a2-b2244297fff4"/>
+				<textFieldExpression><![CDATA[$F{articulos_Refrigerado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="240" y="0" width="24" height="15" uuid="1c2cccb7-07a2-4dd5-a27b-3b4434bb92f1"/>
+				<textFieldExpression><![CDATA[$F{articulos_Cambio_Precio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="264" y="0" width="24" height="15" uuid="3a4757a1-268c-463a-83c5-2b46181c1ef7"/>
+				<textFieldExpression><![CDATA[$F{articulos_Iva}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="288" y="0" width="24" height="15" uuid="804b9df6-0494-4541-92c0-37e2eba1a1af"/>
+				<textFieldExpression><![CDATA[$F{articulos_Leps}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="312" y="0" width="24" height="15" uuid="170ec620-62b7-418e-8088-6bf7344efa4c"/>
+				<textFieldExpression><![CDATA[$F{articulos_Buscar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="336" y="0" width="24" height="15" uuid="38d898bb-b77f-4c85-893b-7c4e365ce2cf"/>
+				<textFieldExpression><![CDATA[$F{articulos_Precio_Publico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="360" y="0" width="24" height="15" uuid="192c937b-6347-4955-b57b-5450601b931d"/>
+				<textFieldExpression><![CDATA[$F{articulos_Precio_Costo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="384" y="0" width="24" height="15" uuid="0d43af71-b681-46a6-a670-d39b4072eb58"/>
+				<textFieldExpression><![CDATA[$F{articulos_Margen_Utilidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="408" y="0" width="24" height="15" uuid="ded00c92-26f1-4446-b76e-6eb60ca90908"/>
+				<textFieldExpression><![CDATA[$F{articulos_Descuento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="432" y="0" width="24" height="15" uuid="510eb551-c800-4402-bb84-f52a9aef0fbb"/>
+				<textFieldExpression><![CDATA[$F{articulos_Comision}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="456" y="0" width="24" height="15" uuid="d271d531-4ce5-47b0-8367-2844c79327b1"/>
+				<textFieldExpression><![CDATA[$F{articulos_Maximo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="480" y="0" width="24" height="15" uuid="ec1e972e-bf27-4df1-bb9f-ab5a1c9262d8"/>
+				<textFieldExpression><![CDATA[$F{articulos_Minimo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="504" y="0" width="24" height="15" uuid="51f3323f-fd78-4285-98fc-75f296961c23"/>
+				<textFieldExpression><![CDATA[$F{articulos_Dias_Inventario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="528" y="0" width="24" height="15" uuid="e5fe1b5c-5e27-41dc-ba11-ece0d5c8c039"/>
+				<textFieldExpression><![CDATA[$F{articulos_Anabolico}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="fa6d4f41-c3db-4d4a-a096-8d4c4c5af7b6"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="bcc98772-5e7d-4bb7-a753-77fe9f6bb59a"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="46645155-bee1-41c1-9415-b3e89b1ee277"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="89075180-4e6c-49b8-9cba-c064cd60ad23"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

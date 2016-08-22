@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="18d47d5b-9d3b-4900-95de-f74222e995a3">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     doctores.`Id` AS doctores_Id,
+     doctores.`Doctor` AS doctores_Doctor,
+     doctores.`Nombre` AS doctores_Nombre,
+     doctores.`Calle` AS doctores_Calle,
+     doctores.`Colonia` AS doctores_Colonia,
+     doctores.`CP` AS doctores_CP,
+     doctores.`Poblacion` AS doctores_Poblacion,
+     doctores.`Telefono` AS doctores_Telefono,
+     doctores.`Cedula` AS doctores_Cedula,
+     doctores.`Comision` AS doctores_Comision,
+     doctores.`Plazo` AS doctores_Plazo
+FROM
+     `doctores` doctores]]>
+	</queryString>
+	<field name="doctores_Id" class="java.lang.Integer"/>
+	<field name="doctores_Doctor" class="java.lang.String"/>
+	<field name="doctores_Nombre" class="java.lang.String"/>
+	<field name="doctores_Calle" class="java.lang.String"/>
+	<field name="doctores_Colonia" class="java.lang.String"/>
+	<field name="doctores_CP" class="java.lang.Integer"/>
+	<field name="doctores_Poblacion" class="java.lang.String"/>
+	<field name="doctores_Telefono" class="java.lang.Integer"/>
+	<field name="doctores_Cedula" class="java.lang.String"/>
+	<field name="doctores_Comision" class="java.lang.Integer"/>
+	<field name="doctores_Plazo" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="08f99561-03ea-41e1-8fff-87e431f36a94"/>
+				<imageExpression><![CDATA["leaf_banner_green.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="289" height="33" uuid="603ef428-3231-4643-a474-52babbc1d5c1"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Mega Servicios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="71" y="46" width="218" height="22" uuid="4fa23eb7-af40-4cb3-bcf1-26dd4149b51d"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Doctores]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="44c61e19-d396-4a79-89a7-bd6eb1b0ef06"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="50" height="15" uuid="0ea32993-6bc4-4a8a-bcc1-ce42e7dd5bbe"/>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="50" y="19" width="50" height="15" uuid="adf33873-6c73-43bc-84c8-1e6263d92177"/>
+				<text><![CDATA[Doctor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="100" y="19" width="50" height="15" uuid="76022d62-b6c8-4d30-adf4-13a328210e8e"/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="150" y="19" width="50" height="15" uuid="19e06be4-cb81-4214-b776-d867e60dec16"/>
+				<text><![CDATA[Calle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="200" y="19" width="50" height="15" uuid="fbd174bd-100a-4044-a783-bff96e6bea68"/>
+				<text><![CDATA[Colonia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="250" y="19" width="50" height="15" uuid="8324c7b1-aa13-4038-bda9-4b67edd95cb5"/>
+				<text><![CDATA[CP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="300" y="19" width="50" height="15" uuid="9d55631c-4b40-45e1-816e-81859508f129"/>
+				<text><![CDATA[Poblacion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="350" y="19" width="50" height="15" uuid="b93817cd-993e-404f-a780-6dcb3b2ad0be"/>
+				<text><![CDATA[Telefono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="400" y="19" width="50" height="15" uuid="2bc54bc9-6507-48d3-90ce-30862ec3291e"/>
+				<text><![CDATA[Cedula]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="450" y="19" width="50" height="15" uuid="79f9e6d6-b353-425e-80b2-c490c2f2200e"/>
+				<text><![CDATA[Comision]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="500" y="19" width="50" height="15" uuid="5097a05c-5210-45ee-9290-5f22dec936f0"/>
+				<text><![CDATA[Plazo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="5f91a8e7-e38d-49f2-929f-631a9c98e347"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="50" height="15" uuid="942ab37b-9cf3-4952-8af8-2e542f9a49bb"/>
+				<textFieldExpression><![CDATA[$F{doctores_Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="50" y="0" width="50" height="15" uuid="c550c38c-f18b-42b8-a2ad-f7ddf9b23cac"/>
+				<textFieldExpression><![CDATA[$F{doctores_Doctor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="100" y="0" width="50" height="15" uuid="161e173e-cc2a-4a0f-9510-90f37d0eba9a"/>
+				<textFieldExpression><![CDATA[$F{doctores_Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="150" y="0" width="50" height="15" uuid="e37c2bed-0a41-434b-af7c-fe23ced769ed"/>
+				<textFieldExpression><![CDATA[$F{doctores_Calle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="200" y="0" width="50" height="15" uuid="bc9d6f94-6691-4a64-9698-cfb8c3b2c19b"/>
+				<textFieldExpression><![CDATA[$F{doctores_Colonia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="250" y="0" width="50" height="15" uuid="ba730649-a860-4d62-bc3e-808cc9402c43"/>
+				<textFieldExpression><![CDATA[$F{doctores_CP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="300" y="0" width="50" height="15" uuid="1216cbfe-a13f-426a-84d3-73889cbb5617"/>
+				<textFieldExpression><![CDATA[$F{doctores_Poblacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="350" y="0" width="50" height="15" uuid="6bd32ea2-e752-4665-8a13-5867c659bb9d"/>
+				<textFieldExpression><![CDATA[$F{doctores_Telefono}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="400" y="0" width="50" height="15" uuid="00e2574e-0ee4-4c37-be79-dbce1d23520e"/>
+				<textFieldExpression><![CDATA[$F{doctores_Cedula}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="450" y="0" width="50" height="15" uuid="a198f1e3-65d6-4103-92d1-d8934baecfd7"/>
+				<textFieldExpression><![CDATA[$F{doctores_Comision}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="500" y="0" width="50" height="15" uuid="566d08b1-1574-401f-bb2e-af3d879685dd"/>
+				<textFieldExpression><![CDATA[$F{doctores_Plazo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="f01a659e-2579-4bf5-8fad-6b08adec3722"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="97c9f839-6254-4fff-80d4-3399683c27cf"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="05b973ca-98b3-46c1-bcbc-928f06c0d069"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="b8fe164b-bbde-477c-b1c7-29517101eeef"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="60b00afa-80a8-480a-a8df-0aff67e240b7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     cajas.`Id` AS cajas_Id,
+     cajas.`Caja` AS cajas_Caja,
+     cajas.`Nombre` AS cajas_Nombre,
+     cajas.`Limite_Efectivo` AS cajas_Limite_Efectivo,
+     cajas.`Fondo` AS cajas_Fondo
+FROM
+     `cajas` cajas]]>
+	</queryString>
+	<field name="cajas_Id" class="java.lang.Integer"/>
+	<field name="cajas_Caja" class="java.lang.String"/>
+	<field name="cajas_Nombre" class="java.lang.String"/>
+	<field name="cajas_Limite_Efectivo" class="java.lang.Double"/>
+	<field name="cajas_Fondo" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="c6dd91e0-4710-4c6b-a9bb-259c31019755"/>
+				<imageExpression><![CDATA["leaf_banner_green.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="288" height="33" uuid="7d18807e-65ff-4cf0-9fe6-63eeecb2b4a0"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Mega Servicios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="72" y="46" width="216" height="22" uuid="f9e67be4-6fd0-468e-92b4-513b48207d93"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Cajas]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="0eba91ca-e949-442d-8811-657925f4f989"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="72" height="15" uuid="f45e2c87-1af4-401b-8a67-4b4dc3a236fc"/>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="72" y="19" width="125" height="15" uuid="775fd92b-63e4-4f98-83f1-b9a004b7f356"/>
+				<text><![CDATA[Caja]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="197" y="19" width="136" height="15" uuid="27228cfa-984b-4bab-a4b5-7f853f1319e6"/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="333" y="19" width="111" height="15" uuid="473f3b49-74b8-4d83-aa1b-95946df7af05"/>
+				<text><![CDATA[Limite_Efectivo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="444" y="19" width="111" height="15" uuid="243e55ac-dfd3-4e9c-910a-aeb7dec3ce39"/>
+				<text><![CDATA[Fondo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="b44763bb-e7bb-48bf-8a6a-8e79b412429b"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="72" height="15" uuid="e2446d68-c623-4ad3-832c-601791b12bfe"/>
+				<textFieldExpression><![CDATA[$F{cajas_Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="72" y="0" width="125" height="15" uuid="b2b6ed03-0fcf-4a1e-b032-2dcaaaa86df0"/>
+				<textFieldExpression><![CDATA[$F{cajas_Caja}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="197" y="0" width="136" height="15" uuid="f3925820-2619-4284-be75-f6b1063e671b"/>
+				<textFieldExpression><![CDATA[$F{cajas_Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="333" y="0" width="111" height="15" uuid="08c59eea-3f09-4fb4-acda-acb6fda11d19"/>
+				<textFieldExpression><![CDATA[$F{cajas_Limite_Efectivo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="444" y="0" width="111" height="15" uuid="458d2b08-8567-479d-b3c1-4d84ffefb0a0"/>
+				<textFieldExpression><![CDATA[$F{cajas_Fondo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="33" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="70941625-7d7c-4c85-a8b0-ab2e036bc6b0"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="6d440368-45e8-4d6f-b617-62179692d5cc"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="743d2a86-8a72-4f7a-b7c6-fdffd02cbc49"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="8faa6606-8325-4b52-911b-c29785a90031"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
